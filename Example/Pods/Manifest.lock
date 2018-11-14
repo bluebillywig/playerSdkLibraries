@@ -1,0 +1,16 @@
+PODS:
+  - BlueBillywigPlayerSDK (1.1.14)
+
+DEPENDENCIES:
+  - BlueBillywigPlayerSDK (from `../`)
+
+EXTERNAL SOURCES:
+  BlueBillywigPlayerSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BlueBillywigPlayerSDK: 2ac9afae89f04a90b83ebebe84b75bab72f9447d
+
+PODFILE CHECKSUM: 2eca84d681984c83910225db9075de18df4c9e0c
+
+COCOAPODS: 1.5.3
