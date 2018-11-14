@@ -161,7 +161,7 @@ bool hasAdUnit = false;
 
     /* Add new BBComponent object to be able to create a BBPlayer object */
     BBComponent *bbComponent = [[BBComponent alloc] initWithPublication:@"demo" vhost:@"demo.bbvms.com" secure:true debug:false];
-    bbComponent = [[BBComponent alloc] initWithPublication:@"bb.dev" vhost:@"bb.dev.bbvms.com" secure:true debug:false];
+//    bbComponent = [[BBComponent alloc] initWithPublication:@"bb.dev" vhost:@"bb.dev.bbvms.com" secure:true debug:false];
 
     [self.componentVersion setText:[[NSString alloc] initWithFormat:@"Component versie: %@", bbComponent.version]];
     
@@ -192,8 +192,8 @@ bool hasAdUnit = false;
         hasAdUnit = true;
     } else {
         // We're using the UIWebView as placeholder for the frame
-            self.bbPlayerWebView = [bbComponent createPlayer:self.playerWebViewPlaceholder.frame clipId:@"2119201" setup:bbPlayerSetup];
-//            self.bbPlayerWebView = [bbComponent createPlayer:self.playerWebViewPlaceholder.frame clipId:@"1081547" token:token setup:bbPlayerSetup];
+        self.bbPlayerWebView = [bbComponent createPlayer:self.playerWebViewPlaceholder.frame clipId:@"2119201" setup:bbPlayerSetup];
+//        self.bbPlayerWebView = [bbComponent createPlayer:self.playerWebViewPlaceholder.frame clipId:@"1081547" token:token setup:bbPlayerSetup];
     }
 
     // Uncomment line below to use token based authentication for video's
