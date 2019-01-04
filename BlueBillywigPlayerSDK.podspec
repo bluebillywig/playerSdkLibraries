@@ -8,7 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BlueBillywigPlayerSDK'
-  s.version          = '1.4.1.7'
+  s.version          = '1.4.1.9'
+
   s.summary          = 'This is the Blue Billywig player SDK.'
 
 # This description is used to generate tags and improve search results.

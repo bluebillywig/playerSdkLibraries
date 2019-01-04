@@ -22,7 +22,7 @@ pod 'BlueBillywigPlayerSDK'
 
 ## Author
 
-weirdall, weirdall@gmail.com
+Floris Groenendijk, f.groenendijk@bluebillywig.com
 
 ## License
 
