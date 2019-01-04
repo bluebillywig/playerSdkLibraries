@@ -234,11 +234,7 @@ NSRegularExpression *urlRegex = nil;
     // target is higher than iOS 9.3.1
     self.wkWebViewConfiguration.mediaTypesRequiringUserActionForPlayback = WKAudiovisualMediaTypeNone;
 #else
-    if (@available(iOS 9.0, *)) {
-        self.wkWebViewConfiguration.requiresUserActionForMediaPlayback = NO;
-    } else {
-        // Fallback on earlier versions
-    }
+    self.wkWebViewConfiguration.requiresUserActionForMediaPlayback = NO;
 #endif
     
     if ( self = [super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, width, height) configuration:self.wkWebViewConfiguration] ) {
@@ -289,6 +285,11 @@ NSRegularExpression *urlRegex = nil;
  */
 - (void)removeFromSuperview{
     NSLog(@"Removing from superview");
+    [super removeFromSuperview];
+}
+
+-(void)dealloc{
+    NSLog(@"Deallocating BBPlayer");
     for (NSString *function in callbackQueue) {
         [self off:function shutdown:true];
     }
@@ -302,7 +303,6 @@ NSRegularExpression *urlRegex = nil;
     self.playerDelegate = nil;
     self.UIDelegate = nil;
     self.wkWebViewConfiguration = nil;
-    [super removeFromSuperview];
 }
 
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {

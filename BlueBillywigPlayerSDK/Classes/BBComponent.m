@@ -8,6 +8,7 @@
 
 #import "Version.h"
 #import "BBComponent.h"
+#import <AdSupport/ASIdentifierManager.h> // @import AdSupport;
 
 #ifndef DEBUG
 #undef NSLog
@@ -62,14 +63,19 @@ const int backendVersion = 3;
  */
 - (NSString *)createUri:(NSString *)vhost component:(NSString *)component{
     NSMutableString *uri = [[NSMutableString alloc] initWithString:@"http"];
+    NSString *idfaString = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]; // identifier for advertising
+    BOOL latBoolean = ![[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled]; // limit ad tracking
+
     if( secure ){
         [uri appendString:@"s"];
     }
-    if( component == nil ){
+    if( component == nil ){ // base uri
         [uri appendString:[NSString stringWithFormat:@"://%@/",vhost]];
     }
-    else{
+    else{ // component uri
         [uri appendString:[NSString stringWithFormat:@"://%@/component/?c=%@&v=%i",vhost,component,backendVersion]];
+        [uri appendString:[NSString stringWithFormat:@"&adsystem_idtype=idfa&adsystem_rdid=%@", idfaString]]; // idfaString doesn't need percent encoding
+        [uri appendString:[NSString stringWithFormat:@"&adsystem_is_lat=%@", latBoolean ? @"1" : @"0"]];
         if( debug ){
             [uri appendString:@"&bbdebug"];
         }

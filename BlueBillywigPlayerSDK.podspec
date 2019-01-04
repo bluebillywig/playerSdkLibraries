@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BlueBillywigPlayerSDK'
-  s.version          = '1.4.1.9'
+  s.version          = '1.4.1.10'
 
   s.summary          = 'This is the Blue Billywig player SDK.'
 
