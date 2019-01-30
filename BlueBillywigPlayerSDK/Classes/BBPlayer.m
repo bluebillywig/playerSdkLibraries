@@ -205,8 +205,11 @@ NSRegularExpression *urlRegex = nil;
     if( fullscreenOnRotateToLandscape ){
         UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
         if (UIInterfaceOrientationIsLandscape(orientation)){
-            width = fullscreenRect.size.height;
-            height = fullscreenRect.size.width;
+            width = fullscreenRect.size.width;
+            height = fullscreenRect.size.height;
+            float width = fullscreenRect.size.width;
+            fullscreenRect.size.width = fullscreenRect.size.height;
+            fullscreenRect.size.height = width;
             startedInLandscape = true;
         } else {
             width = frame.size.width;
