@@ -59,6 +59,7 @@
 - (void)onPlay;
 - (void)onPause;
 - (void)onReady;
+- (void)onResized;
 - (void)onLoadedClipData;
 - (void)onStarted;
 - (void)onEnded;

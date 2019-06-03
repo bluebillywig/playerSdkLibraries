@@ -191,6 +191,7 @@ NSRegularExpression *urlRegex = nil;
 
 - (id)initWithUri:(NSString *)_uri frame:(CGRect)frame clipId:(NSString *)_clipId token:(NSString *)_token baseUri:(NSString *)_baseUri setup:(BBPlayerSetup *)setup{    
     fullscreenRect = [[UIScreen mainScreen] bounds];
+    NSLog(@"init with uri - frame received: %f, %f, %f x %f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
     fullscreenOnRotateToLandscape = [setup fullscreenOnRotateToLandscape];
     collapsed = false;
     
@@ -207,7 +208,6 @@ NSRegularExpression *urlRegex = nil;
         if (UIInterfaceOrientationIsLandscape(orientation)){
             width = fullscreenRect.size.width;
             height = fullscreenRect.size.height;
-            float width = fullscreenRect.size.width;
             fullscreenRect.size.width = fullscreenRect.size.height;
             fullscreenRect.size.height = width;
             startedInLandscape = true;
@@ -325,6 +325,8 @@ NSRegularExpression *urlRegex = nil;
 
     NSArray *args = [[NSArray alloc] init];
     
+    id jsonObject = nil;
+
     if( [components count] > 2 ) {
         if( ! [(NSString*)[components objectAtIndex:2] containsString:@"undefined"] ) {
             
@@ -333,7 +335,7 @@ NSRegularExpression *urlRegex = nil;
             NSError *error;
         
             // Note that JSONObjectWithData will return either an NSDictionary or an NSArray, depending whether your JSON string represents an a dictionary or an array.
-            id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+            jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
         
             if (error) {
                 NSLog(@"userContentController - Error parsing JSON: %@", error);
@@ -348,7 +350,7 @@ NSRegularExpression *urlRegex = nil;
                     NSLog(@"userContentController - json array - %@",args);
                 }
                 else if ([jsonObject isKindOfClass:[NSDictionary class]]) {
-                    NSLog(@"userContentController - Found a dictionary, start parsing arguments");
+                    NSLog(@"userContentController - Found a dictionary, start parsing arguments %@", functionName);
                     NSDictionary *jsonDictionary = (NSDictionary *)jsonObject;
                     NSDictionary *dictionary = [jsonDictionary objectForKey:@"loadedAdPlayoutData"];
 
@@ -372,9 +374,6 @@ NSRegularExpression *urlRegex = nil;
                         }
                     }
 
-                }
-                else {
-                    NSLog(@"userContentController - Found a dictionary, not parsing, only parsing json objects (contained in [..])");
                 }
             }
         }
@@ -413,6 +412,16 @@ NSRegularExpression *urlRegex = nil;
         playerReady = true;
         [self on:@"ready" parent:self function:@"onPlayerReady"];
         [self on:@"loadedclipdata" parent:self function:@"onLoadedClipData"];
+
+        [self on:@"started" parent:self function:@"onStarted"];
+        [self on:@"resized" parent:self function:@"onResized"];
+        [self on:@"ended" parent:self function:@"onEnded"];
+        [self on:@"fullscreen" parent:self function:@"onFullscreen"];
+        [self on:@"retractfullscreen" parent:self function:@"onRetractFullscreen"];
+        [self on:@"error" parent:self function:@"onError"];
+        [self on:@"play" parent:self function:@"onPlay"];
+        [self on:@"pause" parent:self function:@"onPause"];
+
     }
     else if ([functionName isEqualToString:@"onPlayerReady"]){
         if( !firstRun ){
@@ -424,7 +433,7 @@ NSRegularExpression *urlRegex = nil;
         playerReady = true;
         NSMutableArray *handledObjects = [[NSMutableArray alloc] init];
         for (NSString *function in callbackQueue) {
-            NSLog(@"userContentController - Checking for unconnected event");
+            NSLog(@"userContentController - Checking for unconnected event %@", function);
             NSMutableArray *callbackArray = [callbackQueue objectForKey:function];
             
             NSString *event = nil;
@@ -432,7 +441,6 @@ NSRegularExpression *urlRegex = nil;
             
             if( [callbackArray count] > 1 ){
                 attached = callbackArray[1];
-                
                 NSLog(@"callbackArray count %ld attached: %@", (unsigned long)[callbackArray count],attached);
                 
                 if( [attached isEqualToString:@"false"] ){
@@ -443,7 +451,7 @@ NSRegularExpression *urlRegex = nil;
                     
                     if( [event isEqualToString:functionName] ){
                         id parent = callbackArray[0];
-                        
+
                         if( parent != nil ){
 
                             WKScriptMessage *message = [[WKScriptMessage alloc] init];
@@ -466,6 +474,7 @@ NSRegularExpression *urlRegex = nil;
         [self.playerDelegate onReady];
         NSLog(@"Checking for unconnected event");
         [self on:@"started" parent:self function:@"onStarted"];
+        [self on:@"resized" parent:self function:@"onResized"];
         [self on:@"ended" parent:self function:@"onEnded"];
         [self on:@"fullscreen" parent:self function:@"onFullscreen"];
         [self on:@"retractfullscreen" parent:self function:@"onRetractFullscreen"];
@@ -514,6 +523,9 @@ NSRegularExpression *urlRegex = nil;
     } else if ([functionName isEqualToString:@"onEnded"]){
         NSLog(@"firing %@!",functionName);
         [self.playerDelegate onEnded];
+    } else if ([functionName isEqualToString:@"onResized"]){
+        NSLog(@"firing %@!",functionName);
+        [self.playerDelegate onResized];
     } else if ([functionName isEqualToString:@"onFullscreen"]){
         NSLog(@"firing %@!",functionName);
         [self.playerDelegate onFullscreen];
@@ -526,7 +538,11 @@ NSRegularExpression *urlRegex = nil;
     }
     else {
         NSLog(@"firing method %@!",functionName);
-        [self.playerDelegate function:functionName];
+        if (jsonObject) {
+            [self.playerDelegate function:functionName object:jsonObject];
+        } else {
+            [self.playerDelegate function:functionName];
+        }
     }
 }
 
@@ -592,7 +608,7 @@ NSRegularExpression *urlRegex = nil;
     return [self call:function argumentObject:arguments];
 }
 
-- (NSString *)call:(NSString *)function argumentObject:(NSObject *)arguments{
+- (NSString *)call:(NSString *)function argumentObject:(NSObject *)arguments {
     NSError *error;
     NSData *jsonData = nil;
     NSString *jsonString;
