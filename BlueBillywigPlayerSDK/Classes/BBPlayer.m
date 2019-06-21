@@ -276,9 +276,6 @@ NSRegularExpression *urlRegex = nil;
     self.UIDelegate = self;
 
     [self hitTest:CGPointMake(10, 10) withEvent:nil];
-    if (hasAdUnit) {
-        [self fullscreen];
-    }
 
     return self;
 }
