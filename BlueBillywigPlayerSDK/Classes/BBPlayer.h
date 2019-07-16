@@ -13,18 +13,21 @@
 @interface BBPlayerSetup: NSObject{
     BOOL fullscreenOnRotateToLandscape;
     BOOL debug;
+    BOOL showPersonalizedAds;
     NSString *playout;
     NSString *assetType;
     NSString *adUnit;
 };
 - (void)setFullscreenOnRotateToLandscape:(BOOL)fullscreenOnRotateToLandscape;
 - (void)setDebug:(BOOL)debug;
+- (void)showPersonalizedAds:(BOOL)showPersonalizedAds;
 - (void)setPlayout:(NSString * _Nonnull)playout;
 - (void)setAssetType:(NSString * _Nonnull)assetType;
 - (void)setAdUnit:(NSString * _Nonnull)adUnit;
 
 - (BOOL)fullscreenOnRotateToLandscape;
 - (BOOL)debug;
+- (BOOL)showPersonalizedAds;
 - (NSString * _Nonnull)playout;
 - (NSString * _Nonnull)assetType;
 - (NSString * _Nonnull)adUnit;
@@ -135,6 +138,12 @@
  @param arguments Arguments that are needed in the function
  */
 - (NSString * _Nullable)call:(NSString * _Nonnull)function arguments:(NSDictionary * _Nullable)arguments;
+
+/**
+ Update user ad tracking dynamically
+ @param showPersonalizedAds Enable or disable showing of personalized ads
+ */
+- (void)showPersonalizedAds:(BOOL)showPersonalizedAds;
 
 /**
  This function should be called from the controller that contains the UIWebView.

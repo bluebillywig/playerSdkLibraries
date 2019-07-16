@@ -27,11 +27,11 @@ const int backendVersion = 3;
 }
 
 - (id)initWithPublication:(NSString *)publication vhost:(NSString *)vhost{
-    return [self initWithPublication:publication vhost:vhost secure:false];
+    return [self initWithPublication:publication vhost:vhost secure:true];
 }
 
 - (id)initWithPublication:(NSString *)publication vhost:(NSString *)vhost debug:(BOOL)_debug{
-    return [self initWithPublication:publication vhost:vhost secure:false debug:_debug];
+    return [self initWithPublication:publication vhost:vhost secure:true debug:_debug];
 }
 
 - (id)initWithPublication:(NSString *)publication vhost:(NSString *)vhost secure:(BOOL)_secure{
@@ -53,7 +53,7 @@ const int backendVersion = 3;
  @param vhost Base url to load, eg. bbvms.com
  */
 - (NSString *)createUri:(NSString *)vhost{
-    return [self createUri:vhost component:nil];
+    return [self createUri:vhost component:nil showPersonalizedAds:true];
 }
 
 /**
@@ -62,6 +62,16 @@ const int backendVersion = 3;
  @param component Name of the component to load
  */
 - (NSString *)createUri:(NSString *)vhost component:(NSString *)component{
+    return [self createUri:vhost component:component showPersonalizedAds:true];
+}
+
+/**
+ Private function that will create the url for the player
+ @param vhost Base url to load, eg. bbvms.com
+ @param component Name of the component to load
+ @param showPersonalizedAds Show personalized ads to the user, phone setting will be leading when personalized ads should not show
+ */
+- (NSString *)createUri:(NSString *)vhost component:(NSString *)component showPersonalizedAds:(BOOL)showPersonalizedAds{
     NSMutableString *uri = [[NSMutableString alloc] initWithString:@"http"];
     NSString *idfaString = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]; // identifier for advertising
     BOOL latBoolean = ![[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled]; // limit ad tracking
@@ -75,6 +85,9 @@ const int backendVersion = 3;
     else{ // component uri
         [uri appendString:[NSString stringWithFormat:@"://%@/component/?c=%@&v=%i",vhost,component,backendVersion]];
         [uri appendString:[NSString stringWithFormat:@"&adsystem_idtype=idfa&adsystem_rdid=%@", idfaString]]; // idfaString doesn't need percent encoding
+        if (latBoolean == NO && showPersonalizedAds == NO) {
+            latBoolean = YES;
+        }
         [uri appendString:[NSString stringWithFormat:@"&adsystem_is_lat=%@", latBoolean ? @"1" : @"0"]];
         if( debug ){
             [uri appendString:@"&bbdebug"];
@@ -94,7 +107,7 @@ const int backendVersion = 3;
 
 - (id)createPlayer:(CGRect)canvasSize clipId:(NSString *)clipId token:(NSString *)token setup:(BBPlayerSetup *)setup{
     
-    NSString *uri = [self createUri:self.vhost component:@"iOSAppPlayer"];
+    NSString *uri = [self createUri:self.vhost component:@"iOSAppPlayer" showPersonalizedAds:setup.showPersonalizedAds];
     NSString *baseUri = [self createUri:self.vhost];
     
     NSLog(@"Uri for player: %@", uri);

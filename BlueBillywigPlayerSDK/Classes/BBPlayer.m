@@ -9,6 +9,7 @@
 #import "BBPlayer.h"
 #import "Version.h"
 #import <Foundation/NSNull.h>
+#import <AdSupport/ASIdentifierManager.h> // @import AdSupport;
 
 #ifndef DEBUG
 #undef NSLog
@@ -29,6 +30,7 @@
         playout = @"default";
         assetType = @"c";
         adUnit = @"";
+        showPersonalizedAds = YES;
     }
     return self;
 }
@@ -39,6 +41,10 @@
 
 - (void)setDebug:(BOOL)_debug{
     debug = _debug;
+}
+
+- (void)showPersonalizedAds:(BOOL)_showPersonalizedAds{
+    showPersonalizedAds = _showPersonalizedAds;
 }
 
 - (void)setPlayout:(NSString *)_playout{
@@ -55,6 +61,10 @@
 
 - (BOOL)fullscreenOnRotateToLandscape{
     return fullscreenOnRotateToLandscape;
+}
+
+- (BOOL)showPersonalizedAds{
+    return showPersonalizedAds;
 }
 
 - (BOOL)debug{
@@ -683,6 +693,18 @@ NSRegularExpression *urlRegex = nil;
              ];
         }
     }
+}
+
+- (void)showPersonalizedAds:(BOOL)showPersonalizedAds{
+
+    NSString *adsNotPersonalized = @"1";
+
+    if (showPersonalizedAds && [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled]) {
+        adsNotPersonalized = @"0";
+    }
+
+    NSDictionary *call = [[NSDictionary alloc] initWithObjects:@[adsNotPersonalized] forKeys:@[@"adsystem_is_lat"]];
+    [self call:@"updatePlayout" argumentObject:call];
 }
 
 - (void)play{
