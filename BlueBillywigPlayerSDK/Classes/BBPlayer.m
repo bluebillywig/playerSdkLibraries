@@ -493,7 +493,6 @@ NSRegularExpression *urlRegex = nil;
         for (NSString *key in eventMapping) {
             id value = eventMapping[key];
             if ([boundEvents containsObject:key]) {
-                NSLog(@"Trying to bind!!!");
                 [self on:key parent:self function:value];
                 [boundEvents addObject:key];
             }
