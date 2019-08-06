@@ -23,7 +23,6 @@
 }
 
 - (id)init{
-    
     if( self = [super init] ){
         fullscreenOnRotateToLandscape = NO;
         debug = NO;
@@ -165,6 +164,8 @@
     
     NSMutableDictionary *callbackQueue;
     NSMutableArray *callQueue;
+    NSDictionary *eventMapping;
+    NSMutableArray *boundEvents;
     
     int alertCallbackId;
     CGRect fullscreenRect;
@@ -212,6 +213,19 @@ NSRegularExpression *urlRegex = nil;
     playerReady = false;
     firstRun = true;
     autoPlay = false;
+    
+    eventMapping = @{
+         @"ready"                : @"onPlayerReady",
+         @"loadedclipdata"       : @"onLoadedClipData",
+         @"started"              : @"onStarted",
+         @"resized"              : @"onResized",
+         @"ended"                : @"onEnded",
+         @"fullscreen"           : @"onFullscreen",
+         @"retractfullscreen"    : @"onRetractFullscreen",
+         @"error"                : @"onError",
+         @"play"                 : @"onPlay",
+         @"pause"                : @"onPause"
+    };
     
     if( fullscreenOnRotateToLandscape ){
         UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
@@ -417,8 +431,14 @@ NSRegularExpression *urlRegex = nil;
         }];
 
         playerReady = true;
-        [self on:@"ready" parent:self function:@"onPlayerReady"];
-        [self on:@"loadedclipdata" parent:self function:@"onLoadedClipData"];
+
+        for (NSString *key in eventMapping) {
+            id value = eventMapping[key];
+            if (![boundEvents containsObject:key]) {
+                [self on:key parent:self function:value];
+                [boundEvents addObject:key];
+            }
+        }
     }
     else if ([functionName isEqualToString:@"onPlayerReady"]){
         if( !firstRun ){
@@ -445,7 +465,7 @@ NSRegularExpression *urlRegex = nil;
                     NSLog(@"Late binding of event: %@ to function: %@", event, function);
                     
                     [handledObjects addObject:function];
-                    
+    
                     if( [event isEqualToString:functionName] ){
                         id parent = callbackArray[0];
 
@@ -470,14 +490,13 @@ NSRegularExpression *urlRegex = nil;
         [callbackQueue removeAllObjects];
         [self.playerDelegate onReady];
         NSLog(@"Checking for unconnected event");
-        [self on:@"started" parent:self function:@"onStarted"];
-        [self on:@"resized" parent:self function:@"onResized"];
-        [self on:@"ended" parent:self function:@"onEnded"];
-        [self on:@"fullscreen" parent:self function:@"onFullscreen"];
-        [self on:@"retractfullscreen" parent:self function:@"onRetractFullscreen"];
-        [self on:@"error" parent:self function:@"onError"];
-        [self on:@"play" parent:self function:@"onPlay"];
-        [self on:@"pause" parent:self function:@"onPause"];
+        for (NSString *key in eventMapping) {
+            id value = eventMapping[key];
+            if ([boundEvents containsObject:key]) {
+                [self on:key parent:self function:value];
+                [boundEvents addObject:key];
+            }
+        }
         if( startedInLandscape ){
             [self call:@"fullscreen"];
         }
