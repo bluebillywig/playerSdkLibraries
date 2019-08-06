@@ -419,16 +419,6 @@ NSRegularExpression *urlRegex = nil;
         playerReady = true;
         [self on:@"ready" parent:self function:@"onPlayerReady"];
         [self on:@"loadedclipdata" parent:self function:@"onLoadedClipData"];
-
-        [self on:@"started" parent:self function:@"onStarted"];
-        [self on:@"resized" parent:self function:@"onResized"];
-        [self on:@"ended" parent:self function:@"onEnded"];
-        [self on:@"fullscreen" parent:self function:@"onFullscreen"];
-        [self on:@"retractfullscreen" parent:self function:@"onRetractFullscreen"];
-        [self on:@"error" parent:self function:@"onError"];
-        [self on:@"play" parent:self function:@"onPlay"];
-        [self on:@"pause" parent:self function:@"onPause"];
-
     }
     else if ([functionName isEqualToString:@"onPlayerReady"]){
         if( !firstRun ){
