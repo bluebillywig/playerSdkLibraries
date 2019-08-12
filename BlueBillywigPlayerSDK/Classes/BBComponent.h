@@ -13,7 +13,7 @@
 @interface BBComponent : NSObject
 
 @property (weak, nonatomic)NSString *publication;
-@property (weak, nonatomic)NSString *vhost;
+@property (strong, nonatomic)NSString *vhost;
 
 struct playerParameters{
     BOOL fullscreenOnRotateToLandscape;
