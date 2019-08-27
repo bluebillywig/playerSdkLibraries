@@ -283,7 +283,8 @@ NSRegularExpression *urlRegex = nil;
         self.scrollView.maximumZoomScale = 1.0;
         self.scrollView.minimumZoomScale = 1.0;
         
-        self.backgroundColor = [[UIColor alloc] initWithRed:1 green:0 blue:0 alpha:1];
+        self.opaque = false;
+        self.backgroundColor = [[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:0];
 
         //Create a URL object.
         NSURL *url = [NSURL URLWithString:uri];
