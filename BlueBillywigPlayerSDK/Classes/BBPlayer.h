@@ -218,6 +218,11 @@
 - (bool)isFullscreen;
 
 /**
+ Use this function to cleanup the player
+ */
+-(void)destroy;
+
+/**
  Expand the view to the frame dimension that is provided
  */
 - (void)expand:(UIView * _Nullable)view;

@@ -7,7 +7,7 @@
 //
 
 #import "BBPlayer.h"
-#import "Version.h"
+#import "BBVersion.h"
 #import <Foundation/NSNull.h>
 #import <AdSupport/ASIdentifierManager.h> // @import AdSupport;
 
@@ -18,7 +18,7 @@
 @implementation BBPlayerSetup
 
 - (NSString *)version{
-    Version *version = [[Version alloc] init];
+    BBVersion *version = [[BBVersion alloc] init];
     return [version getVersion];
 }
 
@@ -196,7 +196,7 @@
 NSRegularExpression *urlRegex = nil;
 
 - (NSString *)version{
-    Version *version = [[Version alloc] init];
+    BBVersion *version = [[BBVersion alloc] init];
     return [version getVersion];
 }
 
@@ -313,6 +313,12 @@ NSRegularExpression *urlRegex = nil;
     [super removeFromSuperview];
 }
 
+-(void)destroy{
+    [wkUserContentController removeAllUserScripts];
+    [wkUserContentController removeScriptMessageHandlerForName:@"callbackHandler"];
+    wkUserContentController = nil;
+}
+
 -(void)dealloc{
     NSLog(@"Deallocating BBPlayer");
     for (NSString *function in callbackQueue) {
@@ -322,9 +328,6 @@ NSRegularExpression *urlRegex = nil;
     callbackQueue = nil;
     [callQueue removeAllObjects];
     callQueue = nil;
-    [wkUserContentController removeAllUserScripts];
-    [wkUserContentController removeScriptMessageHandlerForName:@"callbackHandler"];
-    wkUserContentController = nil;
     self.playerDelegate = nil;
     self.UIDelegate = nil;
     self.wkWebViewConfiguration = nil;

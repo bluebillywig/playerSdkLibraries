@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Floris Groenendijk. All rights reserved.
 //
 
-#import "Version.h"
+#import "BBVersion.h"
 #import "BBComponent.h"
 #import <AdSupport/ASIdentifierManager.h> // @import AdSupport;
 
@@ -22,7 +22,7 @@
 const int backendVersion = 3;
 
 - (NSString *)version{
-    Version *version = [[Version alloc] init];
+    BBVersion *version = [[BBVersion alloc] init];
     return [version getVersion];
 }
 
