@@ -410,6 +410,12 @@ NSRegularExpression *urlRegex = nil;
     
     /* This function is called to notify the WKWebView that the bbAppBridge is operational */
     if( [functionName isEqualToString:@"appbridgeready"] ) {
+        NSString *idfaString = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]; // identifier for advertising
+
+        [self evaluateJavaScriptSynchronous:[NSString stringWithFormat:@"window.iOSAppPlayer['adsystem_is_lat'] = '0';"]];
+        [self evaluateJavaScriptSynchronous:[NSString stringWithFormat:@"window.iOSAppPlayer['adsystem_idtype'] = 'idfa';"]];
+        [self evaluateJavaScriptSynchronous:[NSString stringWithFormat:@"window.iOSAppPlayer['adsystem_rdid'] = '%@';", idfaString]];
+
         if (hasAdUnit) {
             mediaclipUrl = [NSString stringWithFormat:@"%@a/%@.json", baseUri, adUnit];
         } else {
@@ -418,7 +424,7 @@ NSRegularExpression *urlRegex = nil;
         if( token != NULL && token.length > 0 ){
             mediaclipUrl = [mediaclipUrl stringByAppendingString:[NSString stringWithFormat:@"?token=%@", token]];
         }
-        
+
         NSLog(@"Trying to place player bbAppBridge.placePlayer('%@')",mediaclipUrl);
         [self evaluateJavaScript:[NSString stringWithFormat:@"bbAppBridge.placePlayer('%@');", mediaclipUrl] completionHandler:^(id result, NSError *error) {
             if (error == nil)
