@@ -200,7 +200,7 @@ NSRegularExpression *urlRegex = nil;
     return [version getVersion];
 }
 
-- (id)initWithUri:(NSString *)_uri frame:(CGRect)frame clipId:(NSString *)_clipId token:(NSString *)_token baseUri:(NSString *)_baseUri setup:(BBPlayerSetup *)setup{    
+- (id)initWithUri:(NSString *)_uri frame:(CGRect)frame clipId:(NSString *)_clipId token:(NSString *)_token baseUri:(NSString *)_baseUri setup:(BBPlayerSetup *)setup{
     fullscreenRect = [[UIScreen mainScreen] bounds];
     NSLog(@"init with uri - frame received: %f, %f, %f x %f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
     fullscreenOnRotateToLandscape = [setup fullscreenOnRotateToLandscape];
@@ -224,7 +224,8 @@ NSRegularExpression *urlRegex = nil;
          @"retractfullscreen"    : @"onRetractFullscreen",
          @"error"                : @"onError",
          @"play"                 : @"onPlay",
-         @"pause"                : @"onPause"
+         @"pause"                : @"onPause",
+         @"volumechange"         : @"onVolumeChange"
     };
     
     if( fullscreenOnRotateToLandscape ){
@@ -294,7 +295,7 @@ NSRegularExpression *urlRegex = nil;
         //URL Request Object
         NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
         
-        [self loadRequest:requestObj];
+        [self loadRequest:requestObj]; // WKNavigation *nav = ?
     }
     NSLog(@"Initialized function with self %@ and clipId: %@",self,_clipId);
 
@@ -351,6 +352,7 @@ NSRegularExpression *urlRegex = nil;
     NSArray *args = [[NSArray alloc] init];
     
     id jsonObject = nil;
+    NSString *stringData;
 
     if( [components count] > 2 ) {
         if( ! [(NSString*)[components objectAtIndex:2] containsString:@"undefined"] ) {
@@ -364,6 +366,7 @@ NSRegularExpression *urlRegex = nil;
         
             if (error) {
                 NSLog(@"userContentController - Error parsing JSON: %@", error);
+                stringData = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             }
             else
             {
@@ -410,6 +413,12 @@ NSRegularExpression *urlRegex = nil;
     
     /* This function is called to notify the WKWebView that the bbAppBridge is operational */
     if( [functionName isEqualToString:@"appbridgeready"] ) {
+        NSString *idfaString = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]; // identifier for advertising
+
+        [self evaluateJavaScriptSynchronous:[NSString stringWithFormat:@"window.iOSAppPlayer['adsystem_is_lat'] = '0';"]];
+        [self evaluateJavaScriptSynchronous:[NSString stringWithFormat:@"window.iOSAppPlayer['adsystem_idtype'] = 'idfa';"]];
+        [self evaluateJavaScriptSynchronous:[NSString stringWithFormat:@"window.iOSAppPlayer['adsystem_rdid'] = '%@';", idfaString]];
+
         if (hasAdUnit) {
             mediaclipUrl = [NSString stringWithFormat:@"%@a/%@.json", baseUri, adUnit];
         } else {
@@ -418,7 +427,7 @@ NSRegularExpression *urlRegex = nil;
         if( token != NULL && token.length > 0 ){
             mediaclipUrl = [mediaclipUrl stringByAppendingString:[NSString stringWithFormat:@"?token=%@", token]];
         }
-        
+
         NSLog(@"Trying to place player bbAppBridge.placePlayer('%@')",mediaclipUrl);
         [self evaluateJavaScript:[NSString stringWithFormat:@"bbAppBridge.placePlayer('%@');", mediaclipUrl] completionHandler:^(id result, NSError *error) {
             if (error == nil)
@@ -555,11 +564,16 @@ NSRegularExpression *urlRegex = nil;
     } else if ([functionName isEqualToString:@"onError"]){
         NSLog(@"firing %@!",functionName);
         [self.playerDelegate onError];
+    } else if ([functionName isEqualToString:@"onVolumeChange"]){
+        NSLog(@"firing %@!", functionName);
+        [self.playerDelegate onVolumeChange];
     }
     else {
         NSLog(@"firing method %@!",functionName);
         if (jsonObject) {
             [self.playerDelegate function:functionName object:jsonObject];
+        } else if (stringData && [stringData length] != 0) {
+            [self.playerDelegate function:functionName value:stringData];
         } else {
             [self.playerDelegate function:functionName];
         }
@@ -813,33 +827,6 @@ NSRegularExpression *urlRegex = nil;
     }
 }
 
-- (float)getCurrentTime{
-    if( playerReady ){
-        return [[self call:@"getCurrentTime"] floatValue];
-    }
-    else{
-        return 0.0f;
-    }
-}
-
-- (bool)isPlaying{
-    if( playerReady ){
-        return [[self call:@"isPlaying"] boolValue];
-    }
-    else{
-        return false;
-    }
-}
-
-- (bool)isFullscreen{
-    if( playerReady ){
-        return [[self call:@"isFullscreen"] boolValue];
-    }
-    else{
-        return false;
-    }
-}
-
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
     NSLog(@"got javascript alert panel with message %@", message);
     [self.playerDelegate runJavaScriptAlertPanelWithMessage:message initiatedByFrame:frame completionHandler:completionHandler];
@@ -856,6 +843,17 @@ NSRegularExpression *urlRegex = nil;
     NSLog(@"got javascript textinput panel with message %@", prompt);
     [self.playerDelegate runJavaScriptTextInputPanelWithPrompt:prompt defaultText:defaultText initiatedByFrame:frame completionHandler:completionHandler];
     completionHandler( prompt );
+}
+
+// see: https://developer.apple.com/documentation/webkit/wknavigationdelegate/1455623-webview
+- (void)webView:(WKWebView *)webView didFail:(WKNavigation *)navigation withError:(NSError *)error {
+    NSLog(@"web view did fail. error: %@", error.userInfo);
+    [self call:@"error"];
+}
+
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+    NSLog(@"web view did fail provisional navigation. error: %@", error.userInfo);
+    [self call:@"error"];
 }
 
 - (nullable WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures
