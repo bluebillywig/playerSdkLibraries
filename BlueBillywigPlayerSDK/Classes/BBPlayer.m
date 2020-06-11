@@ -300,6 +300,7 @@ NSRegularExpression *urlRegex = nil;
     NSLog(@"Initialized function with self %@ and clipId: %@",self,_clipId);
 
     self.UIDelegate = self;
+    self.navigationDelegate = self;
 
     [self hitTest:CGPointMake(10, 10) withEvent:nil];
 
@@ -414,10 +415,12 @@ NSRegularExpression *urlRegex = nil;
     /* This function is called to notify the WKWebView that the bbAppBridge is operational */
     if( [functionName isEqualToString:@"appbridgeready"] ) {
         NSString *idfaString = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]; // identifier for advertising
+        NSString *buidString = [[NSBundle mainBundle] bundleIdentifier];
 
         [self evaluateJavaScriptSynchronous:[NSString stringWithFormat:@"window.iOSAppPlayer['adsystem_is_lat'] = '0';"]];
         [self evaluateJavaScriptSynchronous:[NSString stringWithFormat:@"window.iOSAppPlayer['adsystem_idtype'] = 'idfa';"]];
         [self evaluateJavaScriptSynchronous:[NSString stringWithFormat:@"window.iOSAppPlayer['adsystem_rdid'] = '%@';", idfaString]];
+        [self evaluateJavaScriptSynchronous:[NSString stringWithFormat:@"window.iOSAppPlayer['adsystem_buid'] = '%@';", buidString]];
 
         if (hasAdUnit) {
             mediaclipUrl = [NSString stringWithFormat:@"%@a/%@.json", baseUri, adUnit];
