@@ -58,6 +58,7 @@
 @protocol BBPlayerEventDelegate
 - (void)function:(NSString * _Nonnull)functionName;
 - (void)function:(NSString * _Nonnull)functionName object:(NSObject * _Nonnull)object;
+- (void)function:(NSString * _Nonnull)functionName value:(NSString * _Nonnull)value;
 - (void)onLoadedPlayout:(Playout * _Nonnull)playout;
 - (void)onPlay;
 - (void)onPause;
@@ -68,6 +69,7 @@
 - (void)onEnded;
 - (void)onFullscreen;
 - (void)onRetractFullscreen;
+- (void)onVolumeChange;
 - (void)onError;
 - (void)runJavaScriptAlertPanelWithMessage:(NSString * _Nonnull)message initiatedByFrame:(WKFrameInfo * _Nonnull)frame completionHandler:(void (^_Nullable)(void))completionHandler;
 - (void)runJavaScriptConfirmPanelWithMessage:(NSString * _Nonnull)message initiatedByFrame:(WKFrameInfo * _Nonnull)frame completionHandler:(void (^_Nullable)(BOOL result))completionHandler;
@@ -76,10 +78,18 @@
 
 @interface BBPlayer : WKWebView<UIAlertViewDelegate,WKUIDelegate,WKNavigationDelegate,WKScriptMessageHandler,UIScrollViewDelegate>
 
-@property (nonatomic,assign) id <BBPlayerEventDelegate> _Nullable playerDelegate;
+@property (nonatomic,weak) id <BBPlayerEventDelegate> _Nullable playerDelegate;
 @property (nonatomic,retain) WKWebViewConfiguration * _Nullable wkWebViewConfiguration;
 
 - (NSString * _Nonnull)version;
+
+/**
+ Initializer, provide uri to load in webview, doesn't fully initialize yet
+ @param uri Load this uri in the webview
+ @param frame Size of the webview frame
+ @param baseUri Use for functions that need the baseUri
+ */
+- (id _Nullable)initWithUri:(NSString * _Nonnull)uri frame:(CGRect)frame baseUri:(NSString * _Nonnull)baseUri;
 
 /**
  Initializer, provide uri to load in webview
@@ -92,6 +102,22 @@
  @param baseUri Use for functions that need the baseUri
  */
 - (id _Nullable)initWithUri:(NSString * _Nonnull)uri frame:(CGRect)frame clipId:(NSString * _Nullable)clipId token:(NSString * _Nullable)token baseUri:(NSString * _Nonnull)baseUri setup:(BBPlayerSetup * _Nonnull)setup;
+
+/**
+ Loads the player in an empty initialized WebView
+ @param clipId Id of the clip to play in the player
+ @param setup Player setup
+ */
+- (void)lateInitialize:(NSString * _Nonnull)clipId setup:(BBPlayerSetup * _Nonnull)setup;
+
+/**
+ Loads the player in an empty initialized WebView
+ @param clipId Id of the clip to play in the player
+ @param token Video token (24h valid) for protected video's, to use tokens contact sales@bluebillywig.com
+ More information: http://bluebillywig.com/nl/blog/your-content-your-rules-how-control-video-content-accessibility
+ @param setup Player setup
+ */
+- (void)lateInitialize:(NSString * _Nonnull)_clipId token:(NSString * _Nullable)_token setup:(BBPlayerSetup * _Nonnull)setup;
 
 /**
  Function to attach to a player event, like fullscreen or playing
@@ -198,24 +224,6 @@
  Use this function to make the player go out of fullscreen mode.
  */
 - (void)retractFullscreen;
-
-/**
- Use this function to get the position of the video.
- @return Position as a float value
- */
-- (float)getCurrentTime;
-
-/**
- Use this function to check if the video is playing.
- @return True when the video is playing
- */
-- (bool)isPlaying;
-
-/**
- Use this function to check if the player is fullscreen.
- @return True when the player is fullscreen
- */
-- (bool)isFullscreen;
 
 /**
  Use this function to cleanup the player

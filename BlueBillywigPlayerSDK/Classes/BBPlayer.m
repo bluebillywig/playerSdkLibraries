@@ -200,7 +200,7 @@ NSRegularExpression *urlRegex = nil;
     return [version getVersion];
 }
 
-- (id)initWithUri:(NSString *)_uri frame:(CGRect)frame clipId:(NSString *)_clipId token:(NSString *)_token baseUri:(NSString *)_baseUri setup:(BBPlayerSetup *)setup{    
+- (id)initWithUri:(NSString *)_uri frame:(CGRect)frame clipId:(NSString *)_clipId token:(NSString *)_token baseUri:(NSString *)_baseUri setup:(BBPlayerSetup *)setup{
     fullscreenRect = [[UIScreen mainScreen] bounds];
     NSLog(@"init with uri - frame received: %f, %f, %f x %f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
     fullscreenOnRotateToLandscape = [setup fullscreenOnRotateToLandscape];
@@ -224,7 +224,8 @@ NSRegularExpression *urlRegex = nil;
          @"retractfullscreen"    : @"onRetractFullscreen",
          @"error"                : @"onError",
          @"play"                 : @"onPlay",
-         @"pause"                : @"onPause"
+         @"pause"                : @"onPause",
+         @"volumechange"         : @"onVolumeChange"
     };
     
     if( fullscreenOnRotateToLandscape ){
@@ -294,15 +295,108 @@ NSRegularExpression *urlRegex = nil;
         //URL Request Object
         NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
         
-        [self loadRequest:requestObj];
+        [self loadRequest:requestObj]; // WKNavigation *nav = ?
     }
     NSLog(@"Initialized function with self %@ and clipId: %@",self,_clipId);
 
     self.UIDelegate = self;
+    self.navigationDelegate = self;
 
     [self hitTest:CGPointMake(10, 10) withEvent:nil];
 
     return self;
+}
+
+- (id)initWithUri:(NSString *)_uri frame:(CGRect)frame baseUri:(NSString *)_baseUri {
+    fullscreenRect = [[UIScreen mainScreen] bounds];
+    NSLog(@"init with uri - frame received: %f, %f, %f x %f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
+    fullscreenOnRotateToLandscape = @NO;
+    collapsed = false;
+
+    urlRegex = [NSRegularExpression regularExpressionWithPattern:@"^[^#]*#" options:NSRegularExpressionCaseInsensitive error:nil];
+
+    float width = 0;
+    float height = 0;
+    playerReady = false;
+    firstRun = true;
+    autoPlay = false;
+
+    uri = _uri;
+    baseUri = _baseUri;
+
+    eventMapping = @{
+         @"ready"                : @"onPlayerReady",
+         @"loadedclipdata"       : @"onLoadedClipData",
+         @"started"              : @"onStarted",
+         @"resized"              : @"onResized",
+         @"ended"                : @"onEnded",
+         @"fullscreen"           : @"onFullscreen",
+         @"retractfullscreen"    : @"onRetractFullscreen",
+         @"error"                : @"onError",
+         @"play"                 : @"onPlay",
+         @"pause"                : @"onPause",
+         @"volumechange"         : @"onVolumeChange"
+    };
+
+    width = frame.size.width;
+    height = frame.size.height;
+    originalRect = frame;
+    callbackQueue = [[NSMutableDictionary alloc] init];
+    callQueue = [[NSMutableArray alloc] init];
+
+    wkUserContentController = [[WKUserContentController alloc] init];
+    [wkUserContentController addScriptMessageHandler:self name:@"callbackHandler"];
+
+    self.wkWebViewConfiguration = [[WKWebViewConfiguration alloc] init];
+    self.wkWebViewConfiguration.userContentController = wkUserContentController;
+    self.wkWebViewConfiguration.allowsInlineMediaPlayback = true;
+#if __IPHONE_OS_VERSION_MIN_REQUIRED > 93000
+    // target is higher than iOS 9.3.1
+    self.wkWebViewConfiguration.mediaTypesRequiringUserActionForPlayback = WKAudiovisualMediaTypeNone;
+#else
+    self.wkWebViewConfiguration.requiresUserActionForMediaPlayback = NO;
+#endif
+
+    self = [super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, width, height) configuration:self.wkWebViewConfiguration];
+    self.UIDelegate = self;
+    self.navigationDelegate = self;
+
+    [self hitTest:CGPointMake(10, 10) withEvent:nil];
+
+    return self;
+}
+
+
+- (void)lateInitialize:(NSString *)_clipId setup:(BBPlayerSetup *)_setup{
+    [self lateInitialize:_clipId token:@"" setup:_setup];
+}
+
+// For a WebView that was initialized empty, we use this to start the player
+- (void)lateInitialize:(NSString *)_clipId token:(NSString *)_token setup:(BBPlayerSetup *)setup{
+        playoutName = [setup playout];
+        assetType = [setup assetType];
+        clipId = _clipId;
+        token = _token;
+        debug = [setup debug];
+        adUnit = [setup adUnit];
+        if ( adUnit.length > 0 ) {
+            hasAdUnit = YES;
+        }
+
+        self.scrollView.bounces = NO;
+        self.scrollView.scrollEnabled = NO;
+        self.scrollView.maximumZoomScale = 1.0;
+        self.scrollView.minimumZoomScale = 1.0;
+
+        self.opaque = false;
+        self.backgroundColor = [[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:0];
+
+        //Create a URL object.
+        NSURL *url = [NSURL URLWithString:uri];
+        //URL Request Object
+        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+
+        [self loadRequest:requestObj];
 }
 
 /**
@@ -351,6 +445,7 @@ NSRegularExpression *urlRegex = nil;
     NSArray *args = [[NSArray alloc] init];
     
     id jsonObject = nil;
+    NSString *stringData;
 
     if( [components count] > 2 ) {
         if( ! [(NSString*)[components objectAtIndex:2] containsString:@"undefined"] ) {
@@ -364,6 +459,7 @@ NSRegularExpression *urlRegex = nil;
         
             if (error) {
                 NSLog(@"userContentController - Error parsing JSON: %@", error);
+                stringData = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             }
             else
             {
@@ -410,6 +506,14 @@ NSRegularExpression *urlRegex = nil;
     
     /* This function is called to notify the WKWebView that the bbAppBridge is operational */
     if( [functionName isEqualToString:@"appbridgeready"] ) {
+        NSString *idfaString = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]; // identifier for advertising
+        NSString *buidString = [[NSBundle mainBundle] bundleIdentifier];
+
+        [self evaluateJavaScriptSynchronous:[NSString stringWithFormat:@"window.iOSAppPlayer['adsystem_is_lat'] = '0';"]];
+        [self evaluateJavaScriptSynchronous:[NSString stringWithFormat:@"window.iOSAppPlayer['adsystem_idtype'] = 'idfa';"]];
+        [self evaluateJavaScriptSynchronous:[NSString stringWithFormat:@"window.iOSAppPlayer['adsystem_rdid'] = '%@';", idfaString]];
+        [self evaluateJavaScriptSynchronous:[NSString stringWithFormat:@"window.iOSAppPlayer['adsystem_buid'] = '%@';", buidString]];
+
         if (hasAdUnit) {
             mediaclipUrl = [NSString stringWithFormat:@"%@a/%@.json", baseUri, adUnit];
         } else {
@@ -418,7 +522,7 @@ NSRegularExpression *urlRegex = nil;
         if( token != NULL && token.length > 0 ){
             mediaclipUrl = [mediaclipUrl stringByAppendingString:[NSString stringWithFormat:@"?token=%@", token]];
         }
-        
+
         NSLog(@"Trying to place player bbAppBridge.placePlayer('%@')",mediaclipUrl);
         [self evaluateJavaScript:[NSString stringWithFormat:@"bbAppBridge.placePlayer('%@');", mediaclipUrl] completionHandler:^(id result, NSError *error) {
             if (error == nil)
@@ -555,11 +659,16 @@ NSRegularExpression *urlRegex = nil;
     } else if ([functionName isEqualToString:@"onError"]){
         NSLog(@"firing %@!",functionName);
         [self.playerDelegate onError];
+    } else if ([functionName isEqualToString:@"onVolumeChange"]){
+        NSLog(@"firing %@!", functionName);
+        [self.playerDelegate onVolumeChange];
     }
     else {
         NSLog(@"firing method %@!",functionName);
         if (jsonObject) {
             [self.playerDelegate function:functionName object:jsonObject];
+        } else if (stringData && [stringData length] != 0) {
+            [self.playerDelegate function:functionName value:stringData];
         } else {
             [self.playerDelegate function:functionName];
         }
@@ -813,33 +922,6 @@ NSRegularExpression *urlRegex = nil;
     }
 }
 
-- (float)getCurrentTime{
-    if( playerReady ){
-        return [[self call:@"getCurrentTime"] floatValue];
-    }
-    else{
-        return 0.0f;
-    }
-}
-
-- (bool)isPlaying{
-    if( playerReady ){
-        return [[self call:@"isPlaying"] boolValue];
-    }
-    else{
-        return false;
-    }
-}
-
-- (bool)isFullscreen{
-    if( playerReady ){
-        return [[self call:@"isFullscreen"] boolValue];
-    }
-    else{
-        return false;
-    }
-}
-
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
     NSLog(@"got javascript alert panel with message %@", message);
     [self.playerDelegate runJavaScriptAlertPanelWithMessage:message initiatedByFrame:frame completionHandler:completionHandler];
@@ -856,6 +938,17 @@ NSRegularExpression *urlRegex = nil;
     NSLog(@"got javascript textinput panel with message %@", prompt);
     [self.playerDelegate runJavaScriptTextInputPanelWithPrompt:prompt defaultText:defaultText initiatedByFrame:frame completionHandler:completionHandler];
     completionHandler( prompt );
+}
+
+// see: https://developer.apple.com/documentation/webkit/wknavigationdelegate/1455623-webview
+- (void)webView:(WKWebView *)webView didFail:(WKNavigation *)navigation withError:(NSError *)error {
+    NSLog(@"web view did fail. error: %@", error.userInfo);
+    [self call:@"error"];
+}
+
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+    NSLog(@"web view did fail provisional navigation. error: %@", error.userInfo);
+    [self call:@"error"];
 }
 
 - (nullable WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures

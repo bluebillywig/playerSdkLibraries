@@ -58,6 +58,12 @@ struct playerParameters{
 - (id)initWithPublication:(NSString *)publication vhost:(NSString *)vhost secure:(BOOL)secure debug:(BOOL)debug;
 
 /**
+ Create an empty webview
+ @param canvasSize Size of the view
+ */
+- (id)createPlayer:(CGRect)canvasSize;
+
+/**
  Create a webview with the Blue Billywig player
  @param canvasSize Size of the view
  @param setup Player setup
