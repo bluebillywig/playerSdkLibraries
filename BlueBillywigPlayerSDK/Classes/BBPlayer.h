@@ -112,12 +112,22 @@
 
 /**
  Loads the player in an empty initialized WebView
- @param clipId Id of the clip to play in the player
- @param token Video token (24h valid) for protected video's, to use tokens contact sales@bluebillywig.com
+ @param _clipId Id of the clip to play in the player
+ @param _token Video token (24h valid) for protected video's, to use tokens contact sales@bluebillywig.com
  More information: http://bluebillywig.com/nl/blog/your-content-your-rules-how-control-video-content-accessibility
  @param setup Player setup
  */
 - (void)lateInitialize:(NSString * _Nonnull)_clipId token:(NSString * _Nullable)_token setup:(BBPlayerSetup * _Nonnull)setup;
+
+/**
+Function to call when a player is in view to process the playout's inview actions
+*/
+- (void) playerInView;
+
+/**
+Function to call when a player is out of view to process the playout's outview actions
+*/
+- (void) playerOutView;
 
 /**
  Function to attach to a player event, like fullscreen or playing

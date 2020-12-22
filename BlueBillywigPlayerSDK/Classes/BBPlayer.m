@@ -310,7 +310,7 @@ NSRegularExpression *urlRegex = nil;
 - (id)initWithUri:(NSString *)_uri frame:(CGRect)frame baseUri:(NSString *)_baseUri {
     fullscreenRect = [[UIScreen mainScreen] bounds];
     NSLog(@"init with uri - frame received: %f, %f, %f x %f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
-    fullscreenOnRotateToLandscape = @NO;
+    fullscreenOnRotateToLandscape = NO;
     collapsed = false;
 
     urlRegex = [NSRegularExpression regularExpressionWithPattern:@"^[^#]*#" options:NSRegularExpressionCaseInsensitive error:nil];
@@ -425,6 +425,16 @@ NSRegularExpression *urlRegex = nil;
     self.playerDelegate = nil;
     self.UIDelegate = nil;
     self.wkWebViewConfiguration = nil;
+}
+
+- (void) playerInView{
+    NSLog(@"Calling playerInView function");
+    [self call:@"setInView" argument:@"true"];
+}
+
+- (void) playerOutView{
+    NSLog(@"Calling playerOutView function");
+    [self call:@"setInView" argument:@"false"];
 }
 
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
