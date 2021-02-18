@@ -13,7 +13,7 @@
 @interface BBComponent : NSObject
 
 @property (weak, nonatomic)NSString *publication;
-@property (weak, nonatomic)NSString *vhost;
+@property (strong, nonatomic)NSString *vhost;
 
 struct playerParameters{
     BOOL fullscreenOnRotateToLandscape;
@@ -32,7 +32,7 @@ struct playerParameters{
 - (id)initWithPublication:(NSString *)publication vhost:(NSString *)vhost;
 
 /**
- Initializer, provide publication and vhost with optional secure http
+ Initializer, provide publication and vhost with debug setting
  @param publication Name of the publication used
  @param vhost Base url to load, eg. bbvms.com
  @param debug Enable debugging for the player
@@ -40,22 +40,10 @@ struct playerParameters{
 - (id)initWithPublication:(NSString *)publication vhost:(NSString *)vhost debug:(BOOL)debug;
 
 /**
- Initializer, provide publication and vhost with optional secure http
- @param publication Name of the publication used
- @param vhost Base url to load, eg. bbvms.com
- @param secure When @c YES Load player over https
+ Create an empty webview
+ @param canvasSize Size of the view
  */
-- (id)initWithPublication:(NSString *)publication vhost:(NSString *)vhost secure:(BOOL)secure;
-
-
-/**
- Initializer, provide publication and vhost with optional secure http
- @param publication Name of the publication used
- @param vhost Base url to load, eg. bbvms.com
- @param secure When @c YES Load player over https
- @param debug Enable debugging for the player
- */
-- (id)initWithPublication:(NSString *)publication vhost:(NSString *)vhost secure:(BOOL)secure debug:(BOOL)debug;
+- (id)createPlayer:(CGRect)canvasSize;
 
 /**
  Create a webview with the Blue Billywig player
