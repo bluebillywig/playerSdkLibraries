@@ -20,6 +20,35 @@ it, simply add the following line to your Podfile:
 pod 'BlueBillywigPlayerSDK'
 ```
 
+## Xcode 12 libraries
+
+XCode 12 needs different libraries for an actual iPhone and an iPhone simulator.
+
+### For use on a simulator:
+
+| Version | Library |
+|--|--|
+| Debug | bin/lib/libBBComponent-<version>-debug-iphonesimulator.a |
+| Release | bin/lib/libBBComponent-<version>-iphonesimulator.a
+
+### For use on an iPhone or iPad:
+
+| Version | Library |
+|--|--|
+| Debug | bin/lib/libBBComponent-<version>-debug-iphoneos.a |
+| Release | bin/lib/libBBComponent-<version>.a
+
+### Fat library for XCode 11 and lower
+
+| Version | Library |
+|--|--|
+| Debug | bin/lib/libBBComponent-<version>-debug-iphone-simulator.a |
+| Release | bin/lib/libBBComponent-<version>-iphone-simulator.a
+
+### Release library for only iPhone devices
+
+Release: bin/lib/libBBComponent-<version>.a
+
 ## Author
 
 Floris Groenendijk, f.groenendijk@bluebillywig.com
