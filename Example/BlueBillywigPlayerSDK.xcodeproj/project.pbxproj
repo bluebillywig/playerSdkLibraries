@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5749B2B9260A8E1A00783954 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5749B2B8260A8E1A00783954 /* MainStoryboard_iPhone.storyboard */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -22,7 +23,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		6BEF5A56D860279E12767D93 /* Pods_BlueBillywigPlayerSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E9AF7EA2205639FEFB6F65 /* Pods_BlueBillywigPlayerSDK_Example.framework */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		926B698932624CECB14550F3 /* Pods_BlueBillywigPlayerSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F7C2E2AD55CADAA840B8FF /* Pods_BlueBillywigPlayerSDK_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5749B2B5260A8D2F00783954 /* BBComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBComponent.h; sourceTree = "<group>"; };
+		5749B2B6260A8D2F00783954 /* BBVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBVersion.h; sourceTree = "<group>"; };
+		5749B2B7260A8D2F00783954 /* BBPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBPlayer.h; sourceTree = "<group>"; };
+		5749B2B8260A8E1A00783954 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* BlueBillywigPlayerSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueBillywigPlayerSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,7 +63,6 @@
 		60E9AF7EA2205639FEFB6F65 /* Pods_BlueBillywigPlayerSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueBillywigPlayerSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6990256D6A416B18F7B929D7 /* BlueBillywigPlayerSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BlueBillywigPlayerSDK.podspec; path = ../BlueBillywigPlayerSDK.podspec; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93BDCB0146D221CC1867F24E /* Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-BlueBillywigPlayerSDK_Tests/Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		99FF0BBCFC540BEA13E723A3 /* Pods-BlueBillywigPlayerSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueBillywigPlayerSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example/Pods-BlueBillywigPlayerSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B7E3E3BD30E664471D5C79B8 /* Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example/Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,12 +135,15 @@
 		6003F593195388D20070C39A /* Example for BlueBillywigPlayerSDK */ = {
 			isa = PBXGroup;
 			children = (
+				5749B2B5260A8D2F00783954 /* BBComponent.h */,
+				5749B2B7260A8D2F00783954 /* BBPlayer.h */,
+				5749B2B6260A8D2F00783954 /* BBVersion.h */,
 				6003F59C195388D20070C39A /* BBAppDelegate.h */,
 				6003F59D195388D20070C39A /* BBAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* BBViewController.h */,
 				6003F5A6195388D20070C39A /* BBViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				5749B2B8260A8E1A00783954 /* MainStoryboard_iPhone.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -280,7 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				5749B2B9260A8E1A00783954 /* MainStoryboard_iPhone.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
