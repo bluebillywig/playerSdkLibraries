@@ -327,6 +327,15 @@ bool hasAdUnit = false;
     NSLog(@"ViewController - onRetractFullscreen");
 }
 
+-(void) onVolumeChange{
+    NSLog(@"ViewController - onVolumeChange");
+}
+
+- (void) onResized {
+    NSLog(@"ViewController - onResized");
+}
+
+
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration{
     if( self.bbPlayerWebView == nil ) {
         if( interfaceOrientation == UIInterfaceOrientationPortrait ) {

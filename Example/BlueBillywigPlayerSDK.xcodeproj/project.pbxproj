@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5749B2B9260A8E1A00783954 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5749B2B8260A8E1A00783954 /* MainStoryboard_iPhone.storyboard */; };
+		5749B2BE260A901500783954 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5749B2BA260A901400783954 /* MainStoryboard_iPhone.storyboard */; };
+		5749B2BF260A901500783954 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5749B2BC260A901400783954 /* MainStoryboard_iPad.storyboard */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -40,7 +41,8 @@
 		5749B2B5260A8D2F00783954 /* BBComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBComponent.h; sourceTree = "<group>"; };
 		5749B2B6260A8D2F00783954 /* BBVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBVersion.h; sourceTree = "<group>"; };
 		5749B2B7260A8D2F00783954 /* BBPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBPlayer.h; sourceTree = "<group>"; };
-		5749B2B8260A8E1A00783954 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		5749B2BB260A901400783954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		5749B2BD260A901400783954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* BlueBillywigPlayerSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueBillywigPlayerSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -143,7 +145,8 @@
 				6003F5A5195388D20070C39A /* BBViewController.h */,
 				6003F5A6195388D20070C39A /* BBViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				5749B2B8260A8E1A00783954 /* MainStoryboard_iPhone.storyboard */,
+				5749B2BA260A901400783954 /* MainStoryboard_iPhone.storyboard */,
+				5749B2BC260A901400783954 /* MainStoryboard_iPad.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -286,10 +289,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5749B2B9260A8E1A00783954 /* MainStoryboard_iPhone.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				5749B2BE260A901500783954 /* MainStoryboard_iPhone.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				5749B2BF260A901500783954 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +402,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5749B2BA260A901400783954 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5749B2BB260A901400783954 /* Base */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		5749B2BC260A901400783954 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5749B2BD260A901400783954 /* Base */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
 		6003F596195388D20070C39A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

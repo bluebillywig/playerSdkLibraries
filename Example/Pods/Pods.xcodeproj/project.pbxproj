@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = BlueBillywigPlayerSDK;
+			productName = BlueBillywigPlayerSDK;
 		};
 /* End PBXAggregateTarget section */
 
@@ -49,11 +50,11 @@
 		10E0B2D3B319E193DF1AC451A6C4318D /* BlueBillywigPlayerSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlueBillywigPlayerSDK.release.xcconfig; sourceTree = "<group>"; };
 		19147EE31649A9F33B1D568FDE5C51B9 /* Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		208F7484B05DFDC2955986634497C954 /* Pods-BlueBillywigPlayerSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlueBillywigPlayerSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		22A7E882D2A724A73658748BA740C4A8 /* Pods_BlueBillywigPlayerSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BlueBillywigPlayerSDK_Example.framework; path = "Pods-BlueBillywigPlayerSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22A7E882D2A724A73658748BA740C4A8 /* Pods_BlueBillywigPlayerSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueBillywigPlayerSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		235D7563173EEB256C87214D12756062 /* Pods-BlueBillywigPlayerSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BlueBillywigPlayerSDK_Tests-dummy.m"; sourceTree = "<group>"; };
 		2A03DB2A348BEEDB9625109D5B9D6048 /* Pods-BlueBillywigPlayerSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BlueBillywigPlayerSDK_Example.modulemap"; sourceTree = "<group>"; };
 		2B8204A5AC520F00FEC785D35B37230B /* BlueBillywigPlayerSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlueBillywigPlayerSDK.debug.xcconfig; sourceTree = "<group>"; };
-		676127BE4DD1CD5336A634D8EC954072 /* Pods_BlueBillywigPlayerSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BlueBillywigPlayerSDK_Tests.framework; path = "Pods-BlueBillywigPlayerSDK_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		676127BE4DD1CD5336A634D8EC954072 /* Pods_BlueBillywigPlayerSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueBillywigPlayerSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		747AF23076AE8A1D2F001C1763BBB05F /* Pods-BlueBillywigPlayerSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BlueBillywigPlayerSDK_Example-dummy.m"; sourceTree = "<group>"; };
 		76C2BDF0C3D78466FA7323FBA4FC9C9A /* Pods-BlueBillywigPlayerSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BlueBillywigPlayerSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -63,7 +64,7 @@
 		9460320511FA425ECB742A3A7C741B9E /* Pods-BlueBillywigPlayerSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BlueBillywigPlayerSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		96E73AE08AB3569226361438D1C31E30 /* Pods-BlueBillywigPlayerSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlueBillywigPlayerSDK_Example-Info.plist"; sourceTree = "<group>"; };
 		9C6946FE0C2B5E642676D9BDB776307E /* Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EA787A81A124C5184AF405F97B52BF1 /* Pods-BlueBillywigPlayerSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlueBillywigPlayerSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		AA18DA5918E3DB655C4BCF7CF938A92E /* Pods-BlueBillywigPlayerSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BlueBillywigPlayerSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C2F1F7101675076225256552730E8856 /* Pods-BlueBillywigPlayerSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BlueBillywigPlayerSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -182,7 +183,6 @@
 				0902ECF7BCA27C592CD240AE1649EF6D /* Frameworks */,
 				125AC55BB7347687246FCFBAD293AB79 /* Support Files */,
 			);
-			name = BlueBillywigPlayerSDK;
 			path = BlueBillywigPlayerSDK;
 			sourceTree = "<group>";
 		};
@@ -517,6 +517,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -549,6 +550,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -624,8 +626,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

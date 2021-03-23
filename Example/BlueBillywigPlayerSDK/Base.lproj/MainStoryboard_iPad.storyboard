@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="2">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="4">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="naJ-ht-8Ks"/>
+                        <viewControllerLayoutGuide type="bottom" id="nWl-Et-GLE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUu-ol-scy">
+                                <rect key="frame" x="710" y="519" width="42" height="30"/>
+                                <state key="normal" title="pause">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseVideo:" destination="2" eventType="touchUpInside" id="BcU-mF-lR0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OJ-yc-RSu">
+                                <rect key="frame" x="343" y="519" width="62" height="30"/>
+                                <state key="normal" title="Load clip">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadClip:" destination="2" eventType="touchUpInside" id="TPa-DG-OCA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1W0-dz-ldc">
+                                <rect key="frame" x="16" y="519" width="30" height="30"/>
+                                <state key="normal" title="play">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playVideo:" destination="2" eventType="touchUpInside" id="Vrp-ru-UOJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ph-wu-fun">
+                                <rect key="frame" x="16" y="567" width="108" height="30"/>
+                                <state key="normal" title="create bbPlayer">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createButton:" destination="2" eventType="touchUpInside" id="9NJ-FH-9ED"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mu9-JW-Uxd">
+                                <rect key="frame" x="636" y="567" width="116" height="30"/>
+                                <state key="normal" title="destroy bbPlayer">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="destroyButton:" destination="2" eventType="touchUpInside" id="1Uj-D7-KUj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogO-kV-R4q">
+                                <rect key="frame" x="16" y="605" width="169" height="30"/>
+                                <state key="normal" title="Attach timeupdate event">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="attachTimeupdateButton:" destination="2" eventType="touchUpInside" id="hQG-YU-bNV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URd-R7-nQ5">
+                                <rect key="frame" x="573" y="605" width="179" height="30"/>
+                                <state key="normal" title="Remove timeupdate event">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeTimeupdateButton:" destination="2" eventType="touchUpInside" id="gLz-V7-kDC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Component versie:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8R3-lo-ty6">
+                                <rect key="frame" x="16" y="983" width="114" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="A7A-q5-Ul7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" red="0.04772960129" green="0.254593966" blue="0.75" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Osk-Pw-9w5">
+                                <rect key="frame" x="0.0" y="10" width="768" height="480"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Je-kS-985">
+                                <rect key="frame" x="321" y="567" width="106" height="30"/>
+                                <state key="normal" title="check bbPlayer">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkButton:" destination="2" eventType="touchUpInside" id="Tcz-gI-qLH"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKm-Id-Z2e">
+                                <rect key="frame" x="16" y="711" width="736" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Load custom url:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGe-Sa-6aZ">
+                                <rect key="frame" x="20" y="682" width="128" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Osk-Pw-9w5" firstAttribute="trailing" secondItem="kUu-ol-scy" secondAttribute="trailing" constant="16" id="6Mr-LD-yu1"/>
+                            <constraint firstItem="Osk-Pw-9w5" firstAttribute="top" secondItem="5" secondAttribute="topMargin" constant="-10" id="6yJ-Ba-qFT"/>
+                            <constraint firstItem="9Je-kS-985" firstAttribute="baseline" secondItem="Mu9-JW-Uxd" secondAttribute="baseline" id="9Lb-dh-6qt"/>
+                            <constraint firstAttribute="trailing" secondItem="Osk-Pw-9w5" secondAttribute="trailing" id="FYs-Kz-fel"/>
+                            <constraint firstItem="ogO-kV-R4q" firstAttribute="baseline" secondItem="URd-R7-nQ5" secondAttribute="baseline" id="FkP-QY-zmw"/>
+                            <constraint firstAttribute="bottom" secondItem="8R3-lo-ty6" secondAttribute="bottom" constant="20" symbolic="YES" id="FqU-RF-XQ1"/>
+                            <constraint firstItem="nWl-Et-GLE" firstAttribute="top" secondItem="URd-R7-nQ5" secondAttribute="bottom" constant="389" id="LJl-Rm-yAe"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1W0-dz-ldc" secondAttribute="trailing" constant="20" symbolic="YES" id="MzJ-fW-4pw"/>
+                            <constraint firstItem="3Ph-wu-fun" firstAttribute="top" secondItem="1W0-dz-ldc" secondAttribute="bottom" constant="18" id="OKh-Ed-j6H"/>
+                            <constraint firstItem="1OJ-yc-RSu" firstAttribute="baseline" secondItem="kUu-ol-scy" secondAttribute="baseline" id="RoE-IJ-9S2"/>
+                            <constraint firstItem="Osk-Pw-9w5" firstAttribute="leading" secondItem="5" secondAttribute="leading" id="TIH-Vw-zYM"/>
+                            <constraint firstItem="ogO-kV-R4q" firstAttribute="leading" secondItem="8R3-lo-ty6" secondAttribute="leading" id="YMV-Gl-kdg"/>
+                            <constraint firstItem="9Je-kS-985" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="321" id="dbY-ld-UhP"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8R3-lo-ty6" secondAttribute="trailing" constant="20" symbolic="YES" id="dzb-ZW-c3S"/>
+                            <constraint firstItem="kUu-ol-scy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" id="g8n-Cd-SF0"/>
+                            <constraint firstItem="ogO-kV-R4q" firstAttribute="top" secondItem="3Ph-wu-fun" secondAttribute="bottom" constant="8" symbolic="YES" id="gRb-F1-PrJ"/>
+                            <constraint firstItem="3Ph-wu-fun" firstAttribute="leading" secondItem="ogO-kV-R4q" secondAttribute="leading" id="h64-Ke-Hzf"/>
+                            <constraint firstItem="Mu9-JW-Uxd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5" secondAttribute="leadingMargin" id="hRB-CS-cWe"/>
+                            <constraint firstItem="URd-R7-nQ5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" id="iGX-NC-kSe"/>
+                            <constraint firstItem="1W0-dz-ldc" firstAttribute="baseline" secondItem="1OJ-yc-RSu" secondAttribute="baseline" id="kOp-Oz-MbI"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ogO-kV-R4q" secondAttribute="trailing" constant="20" symbolic="YES" id="lef-WL-CYZ"/>
+                            <constraint firstItem="3Ph-wu-fun" firstAttribute="baseline" secondItem="9Je-kS-985" secondAttribute="baseline" id="ljA-Xz-Jc7"/>
+                            <constraint firstItem="Osk-Pw-9w5" firstAttribute="leading" secondItem="1W0-dz-ldc" secondAttribute="leading" constant="-16" id="mCr-9m-H3f"/>
+                            <constraint firstItem="3Ph-wu-fun" firstAttribute="leading" secondItem="5" secondAttribute="leadingMargin" constant="-4" id="orT-RO-J0X"/>
+                            <constraint firstItem="Mu9-JW-Uxd" firstAttribute="trailing" secondItem="URd-R7-nQ5" secondAttribute="trailing" id="q6v-OO-CjF"/>
+                            <constraint firstItem="3Ph-wu-fun" firstAttribute="top" secondItem="Osk-Pw-9w5" secondAttribute="bottom" constant="77" id="rrd-En-IYc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mu9-JW-Uxd" secondAttribute="trailing" constant="-4" id="v3y-x3-71K"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Ph-wu-fun" secondAttribute="trailingMargin" id="wUA-bn-mo4"/>
+                            <constraint firstItem="1OJ-yc-RSu" firstAttribute="centerX" secondItem="9Je-kS-985" secondAttribute="centerX" id="ytK-Bh-uic"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="attachTimeupdateButton" destination="ogO-kV-R4q" id="yrU-hz-EN5"/>
+                        <outlet property="checkButton" destination="9Je-kS-985" id="gOr-Fr-IlT"/>
+                        <outlet property="componentVersion" destination="8R3-lo-ty6" id="laD-3v-acO"/>
+                        <outlet property="createButton" destination="3Ph-wu-fun" id="Mxg-cN-e0t"/>
+                        <outlet property="destroyButton" destination="Mu9-JW-Uxd" id="gVh-cu-ID6"/>
+                        <outlet property="loadClipButton" destination="1OJ-yc-RSu" id="Sbd-13-sIs"/>
+                        <outlet property="pauseButton" destination="kUu-ol-scy" id="SpC-Ve-yRc"/>
+                        <outlet property="playButton" destination="1W0-dz-ldc" id="jru-lA-gae"/>
+                        <outlet property="playerWebViewPlaceholder" destination="Osk-Pw-9w5" id="Z2S-WQ-cBk"/>
+                        <outlet property="removeTimeupdateButton" destination="URd-R7-nQ5" id="koy-lJ-rDa"/>
+                        <outlet property="textField" destination="nKm-Id-Z2e" id="TcI-N1-fBk"/>
+                        <outlet property="view" destination="5" id="vdd-8p-gv4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-153" y="-431"/>
+        </scene>
+    </scenes>
+</document>
