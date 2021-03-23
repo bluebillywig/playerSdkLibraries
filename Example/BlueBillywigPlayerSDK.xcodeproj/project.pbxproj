@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		534BC3592C98F8CB44FD1F4C /* Pods_BlueBillywigPlayerSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E16DB0D57EF6DC4A981422 /* Pods_BlueBillywigPlayerSDK_Example.framework */; };
+		27B4AC542ED6E804FB79ECA8 /* Pods_BlueBillywigPlayerSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699759B6C7C41792DC7F4022 /* Pods_BlueBillywigPlayerSDK_Example.framework */; };
+		509CB3E0E8B97989226A66F2 /* Pods_BlueBillywigPlayerSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB1AC5179830EB55612769A /* Pods_BlueBillywigPlayerSDK_Tests.framework */; };
 		5787B2A8219AFE9F004CD6E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5787B2A5219AFE9E004CD6E3 /* ViewController.m */; };
 		5787B2A9219AFE9F004CD6E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5787B2A6219AFE9F004CD6E3 /* AppDelegate.m */; };
 		5787B2AE219B010F004CD6E3 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5787B2AA219B010F004CD6E3 /* MainStoryboard_iPad.storyboard */; };
@@ -23,7 +24,6 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		DB638423954E897CCBA0C741 /* Pods_BlueBillywigPlayerSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354061551758EEC024A2E6B9 /* Pods_BlueBillywigPlayerSDK_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		354061551758EEC024A2E6B9 /* Pods_BlueBillywigPlayerSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueBillywigPlayerSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C2D58AEB36685501DCAFFB4 /* Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example/Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5787B2A4219AFE9E004CD6E3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5787B2A5219AFE9E004CD6E3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5787B2A6219AFE9F004CD6E3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,12 +61,12 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6BF6568730AE7ACA0EA24476 /* Pods-BlueBillywigPlayerSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueBillywigPlayerSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-BlueBillywigPlayerSDK_Tests/Pods-BlueBillywigPlayerSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		699759B6C7C41792DC7F4022 /* Pods_BlueBillywigPlayerSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueBillywigPlayerSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DBC723C545BBF1EB9EE5C1E /* BlueBillywigPlayerSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BlueBillywigPlayerSDK.podspec; path = ../BlueBillywigPlayerSDK.podspec; sourceTree = "<group>"; };
-		A414C2AF701A6BDB241A7961 /* Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example/Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		BAFF83FB04179FCDCEA7DD60 /* Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-BlueBillywigPlayerSDK_Tests/Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		CFDFA794B2B2CAB21FCA15EB /* Pods-BlueBillywigPlayerSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueBillywigPlayerSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example/Pods-BlueBillywigPlayerSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
-		E2E16DB0D57EF6DC4A981422 /* Pods_BlueBillywigPlayerSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueBillywigPlayerSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45642902D02ABEFC2510F7C /* Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-BlueBillywigPlayerSDK_Tests/Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C034CB021AD57BA9B357AFF0 /* Pods-BlueBillywigPlayerSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueBillywigPlayerSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-BlueBillywigPlayerSDK_Tests/Pods-BlueBillywigPlayerSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		CFB1AC5179830EB55612769A /* Pods_BlueBillywigPlayerSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueBillywigPlayerSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF18A30963C78EA086015E62 /* Pods-BlueBillywigPlayerSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueBillywigPlayerSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example/Pods-BlueBillywigPlayerSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				534BC3592C98F8CB44FD1F4C /* Pods_BlueBillywigPlayerSDK_Example.framework in Frameworks */,
+				27B4AC542ED6E804FB79ECA8 /* Pods_BlueBillywigPlayerSDK_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				DB638423954E897CCBA0C741 /* Pods_BlueBillywigPlayerSDK_Tests.framework in Frameworks */,
+				509CB3E0E8B97989226A66F2 /* Pods_BlueBillywigPlayerSDK_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,10 +98,10 @@
 		51D3D3E61BFA52B77177AD86 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A414C2AF701A6BDB241A7961 /* Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig */,
-				CFDFA794B2B2CAB21FCA15EB /* Pods-BlueBillywigPlayerSDK_Example.release.xcconfig */,
-				6BF6568730AE7ACA0EA24476 /* Pods-BlueBillywigPlayerSDK_Tests.debug.xcconfig */,
-				BAFF83FB04179FCDCEA7DD60 /* Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig */,
+				2C2D58AEB36685501DCAFFB4 /* Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig */,
+				EF18A30963C78EA086015E62 /* Pods-BlueBillywigPlayerSDK_Example.release.xcconfig */,
+				C034CB021AD57BA9B357AFF0 /* Pods-BlueBillywigPlayerSDK_Tests.debug.xcconfig */,
+				B45642902D02ABEFC2510F7C /* Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -134,8 +134,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				E2E16DB0D57EF6DC4A981422 /* Pods_BlueBillywigPlayerSDK_Example.framework */,
-				354061551758EEC024A2E6B9 /* Pods_BlueBillywigPlayerSDK_Tests.framework */,
+				699759B6C7C41792DC7F4022 /* Pods_BlueBillywigPlayerSDK_Example.framework */,
+				CFB1AC5179830EB55612769A /* Pods_BlueBillywigPlayerSDK_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,11 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "BlueBillywigPlayerSDK_Example" */;
 			buildPhases = (
-				6352E57D5BACB6181862D824 /* [CP] Check Pods Manifest.lock */,
+				441DDCF8F76BDC2FA162BD0B /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				EA58676B534D2BD8101E405A /* [CP] Embed Pods Frameworks */,
+				EF71CA24C5784ADA3D9E6149 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,7 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "BlueBillywigPlayerSDK_Tests" */;
 			buildPhases = (
-				4BAF59EB8237BBA2A9126E9C /* [CP] Check Pods Manifest.lock */,
+				401302ABAE595F2B34ADC463 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
@@ -247,7 +247,11 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = weirdall;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = PFYB2YN255;
+					};
 					6003F5AD195388D20070C39A = {
+						DevelopmentTeam = PFYB2YN255;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 				};
@@ -257,6 +261,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -294,7 +299,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4BAF59EB8237BBA2A9126E9C /* [CP] Check Pods Manifest.lock */ = {
+		401302ABAE595F2B34ADC463 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -316,7 +321,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6352E57D5BACB6181862D824 /* [CP] Check Pods Manifest.lock */ = {
+		441DDCF8F76BDC2FA162BD0B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -338,20 +343,16 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EA58676B534D2BD8101E405A /* [CP] Embed Pods Frameworks */ = {
+		EF71CA24C5784ADA3D9E6149 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BlueBillywigPlayerSDK_Example/Pods-BlueBillywigPlayerSDK_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BlueBillywigPlayerSDK/BlueBillywigPlayerSDK.framework",
+				"${PODS_ROOT}/../../BlueBillywigPlayerSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BlueBillywigPlayerSDK.framework",
 			);
@@ -502,9 +503,10 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A414C2AF701A6BDB241A7961 /* Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig */;
+			baseConfigurationReference = 2C2D58AEB36685501DCAFFB4 /* Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PFYB2YN255;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlueBillywigPlayerSDK/BlueBillywigPlayerSDK-Prefix.pch";
 				INFOPLIST_FILE = "BlueBillywigPlayerSDK/BlueBillywigPlayerSDK-Info.plist";
@@ -517,9 +519,10 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFDFA794B2B2CAB21FCA15EB /* Pods-BlueBillywigPlayerSDK_Example.release.xcconfig */;
+			baseConfigurationReference = EF18A30963C78EA086015E62 /* Pods-BlueBillywigPlayerSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PFYB2YN255;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlueBillywigPlayerSDK/BlueBillywigPlayerSDK-Prefix.pch";
 				INFOPLIST_FILE = "BlueBillywigPlayerSDK/BlueBillywigPlayerSDK-Info.plist";
@@ -532,9 +535,10 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6BF6568730AE7ACA0EA24476 /* Pods-BlueBillywigPlayerSDK_Tests.debug.xcconfig */;
+			baseConfigurationReference = C034CB021AD57BA9B357AFF0 /* Pods-BlueBillywigPlayerSDK_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PFYB2YN255;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -556,9 +560,10 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAFF83FB04179FCDCEA7DD60 /* Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig */;
+			baseConfigurationReference = B45642902D02ABEFC2510F7C /* Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PFYB2YN255;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
