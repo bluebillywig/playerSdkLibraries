@@ -1,7 +1,9 @@
 use_frameworks!
 
+platform :ios, '9.2'
+
 target 'BlueBillywigPlayerSDK_Example' do
-  pod 'BlueBillywigPlayerSDK', :path => '../'
+  pod 'BlueBillywigPlayerSDK', :git => 'https://github.com/bluebillywig/playerSdkLibraries.git', :tag => '1.4.1.29'
 
   target 'BlueBillywigPlayerSDK_Tests' do
     inherit! :search_paths

@@ -1,19 +1,18 @@
 //
-//  AppDelegate.m
-//  BB Webview
+//  BBAppDelegate.m
+//  BlueBillywigPlayerSDK
 //
-//  Created by Floris Groenendijk on 4/8/13.
-//  Copyright (c) 2013 Floris Groenendijk. All rights reserved.
+//  Created by Floris Groenendijk on 03/23/2021.
+//  Copyright (c) 2021 Floris Groenendijk. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "BBAppDelegate.h"
 
-@implementation AppDelegate
+@implementation BBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-//    [super application:application didFinishLaunchingWithOptions:launchOptions];
     return YES;
 }
 
@@ -25,7 +24,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 

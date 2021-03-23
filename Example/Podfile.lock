@@ -1,16 +1,22 @@
 PODS:
-  - BlueBillywigPlayerSDK (1.1.14)
+  - BlueBillywigPlayerSDK (1.4.1.29)
 
 DEPENDENCIES:
-  - BlueBillywigPlayerSDK (from `../`)
+  - BlueBillywigPlayerSDK (from `https://github.com/bluebillywig/playerSdkLibraries.git`, tag `1.4.1.29`)
 
 EXTERNAL SOURCES:
   BlueBillywigPlayerSDK:
-    :path: "../"
+    :git: https://github.com/bluebillywig/playerSdkLibraries.git
+    :tag: 1.4.1.29
+
+CHECKOUT OPTIONS:
+  BlueBillywigPlayerSDK:
+    :git: https://github.com/bluebillywig/playerSdkLibraries.git
+    :tag: 1.4.1.29
 
 SPEC CHECKSUMS:
-  BlueBillywigPlayerSDK: 2ac9afae89f04a90b83ebebe84b75bab72f9447d
+  BlueBillywigPlayerSDK: c3118eedfd039e272f7be63efd47be2b4386b63f
 
-PODFILE CHECKSUM: 2eca84d681984c83910225db9075de18df4c9e0c
+PODFILE CHECKSUM: 2c342f4294916b0a977269e461a6f62a5f7eb78d
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.10.1

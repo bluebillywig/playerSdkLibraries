@@ -1,6 +1,6 @@
 {
   "name": "BlueBillywigPlayerSDK",
-  "version": "1.1.14",
+  "version": "1.4.1.29",
   "summary": "This is the Blue Billywig player SDK.",
   "description": "The Blue Billywig player SDK can be used to communicate with our player.",
   "homepage": "https://github.com/bluebillywig/playerSdkLibraries.git",
@@ -13,13 +13,18 @@
   },
   "source": {
     "git": "https://github.com/bluebillywig/playerSdkLibraries.git",
-    "tag": "1.1.14"
+    "tag": "1.4.1.29"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "9.2"
   },
-  "source_files": "BlueBillywigPlayerSDK/Classes/**/*",
-  "public_header_files": "BlueBillywigPlayerSDK/Classes/**/*.h",
+  "pod_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+  },
+  "user_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+  },
+  "vendored_frameworks": "BlueBillywigPlayerSDK.framework",
   "frameworks": [
     "UIKit",
     "Foundation",

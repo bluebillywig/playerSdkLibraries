@@ -10,9 +10,6 @@
 #endif
 #endif
 
-#import "BBComponent.h"
-#import "BBPlayer.h"
-#import "Version.h"
 
 FOUNDATION_EXPORT double BlueBillywigPlayerSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char BlueBillywigPlayerSDKVersionString[];
