@@ -56,7 +56,7 @@ bool hasAdUnit = false;
     if( self.bbPlayerWebView == nil ){
         NSString *token =  @"dfb4bf863f2bcb94f05c582365c48442a20be66f";
         
-        BBComponent *bbComponent = [[BBComponent alloc] initWithPublication:@"demo" vhost:@"demo.bbvms.com" secure:true debug:false];
+        BBComponent *bbComponent = [[BBComponent alloc] initWithPublication:@"demo" vhost:@"demo.bbvms.com" debug:false];
 //        bbComponent = [[BBComponent alloc] initWithPublication:@"bb.dev" vhost:@"bb.dev.bbvms.com" secure:true debug:false];
         
         /* Setup player by creating a BBPlayerSetup object */
@@ -160,7 +160,7 @@ bool hasAdUnit = false;
     mainFrame = self.view.frame;
 
     /* Add new BBComponent object to be able to create a BBPlayer object */
-    BBComponent *bbComponent = [[BBComponent alloc] initWithPublication:@"demo" vhost:@"demo.bbvms.com" secure:true debug:false];
+    BBComponent *bbComponent = [[BBComponent alloc] initWithPublication:@"demo" vhost:@"demo.bbvms.com" debug:false];
 //    bbComponent = [[BBComponent alloc] initWithPublication:@"bb.dev" vhost:@"bb.dev.bbvms.com" secure:true debug:false];
 
     [self.componentVersion setText:[[NSString alloc] initWithFormat:@"Component versie: %@", bbComponent.version]];

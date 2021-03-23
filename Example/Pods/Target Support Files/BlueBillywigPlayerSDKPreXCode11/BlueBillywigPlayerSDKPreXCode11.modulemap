@@ -1,0 +1,6 @@
+framework module BlueBillywigPlayerSDKPreXCode11 {
+  umbrella header "BlueBillywigPlayerSDKPreXCode11-umbrella.h"
+
+  export *
+  module * { export * }
+}

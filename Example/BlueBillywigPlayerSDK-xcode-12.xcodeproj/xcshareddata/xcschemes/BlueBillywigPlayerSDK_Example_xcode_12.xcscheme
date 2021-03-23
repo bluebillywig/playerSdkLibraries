@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1240"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;WEBVIEW_DIR=$SOURCE_ROOT/BBWebview&#10;LOG_FILE=&apos;/tmp/BBWebview-xcode-12-pre-actions.log&apos;&#10;echo &quot;webview $WEBVIEW_DIR platform: $PLATFORM_NAME&quot; &gt;&gt; $LOG_FILE&#10;ls $SOURCE_ROOT &gt;&gt; $LOG_FILE&#10;&#10;if [ &quot;$PLATFORM_NAME&quot; == &apos;iphoneos&apos; ]; then&#10;    PLATFORM_FILE=`find $WEBVIEW_DIR -type f | grep -e &quot;-debug-iphoneos\.a&quot;`&#10;    echo &quot;Platform file: $PLATFORM_FILE&quot; &gt;&gt; $LOG_FILE&#10;    LIBRARY_FILE=`echo $PLATFORM_FILE | sed &apos;s/-debug-iphoneos//&apos;`&#10;    echo &quot;Library file: $LIBRARY_FILE&quot; &gt;&gt; $LOG_FILE&#10;else&#10;    PLATFORM_FILE=`find $WEBVIEW_DIR -type f | grep -e &quot;-debug-iphonesimulator\.a&quot;`&#10;    echo &quot;Platform file: $PLATFORM_FILE&quot; &gt;&gt; $LOG_FILE&#10;    LIBRARY_FILE=`echo $PLATFORM_FILE | sed &apos;s/-debug-iphonesimulator//&apos;`&#10;    echo &quot;Library file: $LIBRARY_FILE&quot; &gt;&gt; $LOG_FILE&#10;fi&#10;&#10;cp $PLATFORM_FILE $LIBRARY_FILE&#10;echo &quot;copy file $PLATFORM_FILE to $LIBRARY_FILE&quot; &gt;&gt; $LOG_FILE&#10;echo &quot;&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "6003F589195388D20070C39A"
+                     BuildableName = "BlueBillywigPlayerSDK_Example_xcode_12.app"
+                     BlueprintName = "BlueBillywigPlayerSDK_Example_xcode_12"
+                     ReferencedContainer = "container:BlueBillywigPlayerSDK-xcode-12.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6003F589195388D20070C39A"
+               BuildableName = "BlueBillywigPlayerSDK_Example_xcode_12.app"
+               BlueprintName = "BlueBillywigPlayerSDK_Example_xcode_12"
+               ReferencedContainer = "container:BlueBillywigPlayerSDK-xcode-12.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6003F5AD195388D20070C39A"
+               BuildableName = "BlueBillywigPlayerSDK_Tests_xcode_12.xctest"
+               BlueprintName = "BlueBillywigPlayerSDK_Tests_xcode_12"
+               ReferencedContainer = "container:BlueBillywigPlayerSDK-xcode-12.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6003F589195388D20070C39A"
+            BuildableName = "BlueBillywigPlayerSDK_Example_xcode_12.app"
+            BlueprintName = "BlueBillywigPlayerSDK_Example_xcode_12"
+            ReferencedContainer = "container:BlueBillywigPlayerSDK-xcode-12.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6003F589195388D20070C39A"
+            BuildableName = "BlueBillywigPlayerSDK_Example_xcode_12.app"
+            BlueprintName = "BlueBillywigPlayerSDK_Example_xcode_12"
+            ReferencedContainer = "container:BlueBillywigPlayerSDK-xcode-12.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

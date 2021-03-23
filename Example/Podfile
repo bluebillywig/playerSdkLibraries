@@ -1,11 +1,18 @@
 use_frameworks!
 
-target 'BlueBillywigPlayerSDK_Example' do
-  pod 'BlueBillywigPlayerSDK', :path => '../'
+platform :ios, '9.3'
 
-  target 'BlueBillywigPlayerSDK_Tests' do
-    inherit! :search_paths
+project 'BlueBillywigPlayerSDK.xcodeproj'
+project 'BlueBillywigPlayerSDK-xcode-12.xcodeproj'
 
-    
-  end
+target :BlueBillywigPlayerSDK_Example do
+  project 'BlueBillywigPlayerSDK'
+  pod 'BlueBillywigPlayerSDKPreXCode11', :path => '../'
+  workspace 'BlueBillywigPlayerSDK.xcworkspace'
+end
+
+target :BlueBillywigPlayerSDK_Example_xcode_12 do
+  project 'BlueBillywigPlayerSDK-xcode-12.xcodeproj'
+  pod 'BlueBillywigPlayerSDKPreXCode11', :path => '../'
+  workspace 'BlueBillywigPlayerSDK-xcode-12.xcworkspace'
 end

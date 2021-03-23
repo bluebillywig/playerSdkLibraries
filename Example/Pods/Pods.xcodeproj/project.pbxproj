@@ -6,373 +6,434 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		115DF9F2B0C62B5850F9E0E8C0ACCEB0 /* BlueBillywigPlayerSDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FB9D576AE4E1770251E1720CD41186BB /* Build configuration list for PBXAggregateTarget "BlueBillywigPlayerSDK" */;
+			buildPhases = (
+				C1A189CC7EEA4B9FB7283CC40BD9CB75 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = BlueBillywigPlayerSDK;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		060EA51E56450085ED172FAC96C2E73C /* BBComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7461AE847C2567DA003AA693E8AF34 /* BBComponent.m */; };
-		225089B2BA53FD241DAE74538207CE21 /* BBComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 95224A948F918245AB4258106445B563 /* BBComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2A53481F9700EEC2E065A6281682F27A /* BBPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = CCE2162A0FCFFEC2E638FB3238EE2390 /* BBPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37CFEF3AE0B815E4F843F7D63B4280CA /* Pods-BlueBillywigPlayerSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C56BEA8BE52ABC9616D7848C7DE43F1B /* Pods-BlueBillywigPlayerSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4332D884F98F1349BEB7F3C4A974160A /* Version.h in Headers */ = {isa = PBXBuildFile; fileRef = F01D3E3E911996BCE2C633EC0F7329CF /* Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E1313C53280F275815A8056F45C4DB7 /* BlueBillywigPlayerSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A093F2028140D79709BDC4B4AD90BB5E /* BlueBillywigPlayerSDK-dummy.m */; };
-		97FE8CA9A5449B336738D3A9C1B28E99 /* Version.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE162D7A17122DE849669D5D8D41EBE /* Version.m */; };
-		99755E6E275CF97C11DFF9B03A106B91 /* Pods-BlueBillywigPlayerSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58E34D1BC48A7609EA46BAE7A1E1950E /* Pods-BlueBillywigPlayerSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BBBD037264057CDF3F720FEA8B624737 /* Pods-BlueBillywigPlayerSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D273BFBDDE731189F8089E43901A2D08 /* Pods-BlueBillywigPlayerSDK_Example-dummy.m */; };
-		BCEE0DD8B969ACFA0982629639689FBA /* BBPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADF4A0762CFF91A74E8D34464C1A95F /* BBPlayer.m */; };
-		CCFA2E4BB4B9BC2ADC151F3888CF6D1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
-		D27FAB8C9A2B32E3A5E3E57A9EB24C77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E404AA6957590324067E330E0EC533 /* UIKit.framework */; };
-		DB89C6996D572AD5AA9111904EF4EB5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
-		DD2AC3489177233C1AD9DC219D68E59F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
-		E6862826D8E80F56E8005C7AE7D9F99B /* BlueBillywigPlayerSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 55AB570A91EB9A2DB774F8C1ED07BCC4 /* BlueBillywigPlayerSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0A64D6BECF136383C80793F878EE33F /* Pods-BlueBillywigPlayerSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A98CBA2F386266E8392E43F3C69C6D /* Pods-BlueBillywigPlayerSDK_Tests-dummy.m */; };
+		03BAB793ADCBA20B6B094C48B734077E /* BBComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DECCE3E264B7CE48580B6F67B30A687 /* BBComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28A8011D33FEDCD3908C2F6BAD59C433 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */; };
+		301648CAE6D2DDB449B2C55B5354771F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */; };
+		4796BCF19A80ED3D51800DCC32393A6A /* BBVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CE5B0BF89D7B4462973148864901AF1 /* BBVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5013672006D1210F91CE7A1F30E46EC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553F02396820467C46BFBDBFD5A82BB7 /* CoreGraphics.framework */; };
+		51930A2FCDF4FE28A473812CF85D180B /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F913CB80839CEF664836BD007803F89 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-dummy.m */; };
+		6F12A02F45FFDADEEEA096F018219DF8 /* Pods-BlueBillywigPlayerSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C39676F82FAAED0256D706AB653ED63B /* Pods-BlueBillywigPlayerSDK_Example-dummy.m */; };
+		80FD02673B072D7B94BC4557D61FC530 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFAC17E35C4C855B7DD30B7CFD8A28A0 /* UIKit.framework */; };
+		9D2C0E934404473359060305EA3368E3 /* BlueBillywigPlayerSDKPreXCode11-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6097DE701244D4281268EA67ED79B0D3 /* BlueBillywigPlayerSDKPreXCode11-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E2E1AA9D2EF0F440A7A06F9663B3D41 /* BlueBillywigPlayerSDKPreXCode11-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3354E04084B746A09F2BE7E9FCC71C /* BlueBillywigPlayerSDKPreXCode11-dummy.m */; };
+		B88C32204B560AC254370D09F1B3C178 /* Version.m in Sources */ = {isa = PBXBuildFile; fileRef = 842EB74FED1A2280767F57B1D6817972 /* Version.m */; };
+		B924F2AE185990DD03CA49B23E6A05EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */; };
+		C49647E03A2CF09693E9034C92D89CEB /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 75CA1AD74CC1CBDC38CAAAC0490370C8 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE31BCCBEC014189B36262C4F7EDE67A /* BBPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7AF6D55FB6BDEC331FF1DB06E684FA /* BBPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA9DEAFFE6B3474335FAC478F5BD74E6 /* Version.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8986746244035438BC38798E384648 /* Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDD8E6579DC1C80DA1AB65268437A6E7 /* Pods-BlueBillywigPlayerSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53C17262A676D5837CD02D31537FD6AD /* Pods-BlueBillywigPlayerSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		50AF8CF53582D4DEB6179FE57EF4FA12 /* PBXContainerItemProxy */ = {
+		AC97132A9374025BEBD998334C00618A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B2962082FCDCDA12D17910F0B1341D93;
-			remoteInfo = BlueBillywigPlayerSDK;
+			remoteGlobalIDString = 1740832285DD6FDEA89D287F37740F62;
+			remoteInfo = BlueBillywigPlayerSDKPreXCode11;
 		};
-		FE02EEAFC0185C07ED665CA4601E1DBE /* PBXContainerItemProxy */ = {
+		CA76C56CEB6E5704A91F3C032895FEE3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0D682850BBC8022D25E011FB27115BBC;
-			remoteInfo = "Pods-BlueBillywigPlayerSDK_Example";
+			remoteGlobalIDString = 115DF9F2B0C62B5850F9E0E8C0ACCEB0;
+			remoteInfo = BlueBillywigPlayerSDK;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2899B2DDEE7B0ABEE294B4243F810AA9 /* Pods-BlueBillywigPlayerSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlueBillywigPlayerSDK_Example-Info.plist"; sourceTree = "<group>"; };
-		2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		321EF153162A918EBBE868F861044AB7 /* Pods-BlueBillywigPlayerSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlueBillywigPlayerSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		36C47592E2D56DFCCAC6C4373F7EE639 /* Pods_BlueBillywigPlayerSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueBillywigPlayerSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		45E97D91D58AEF27F862A8C0A6AA3A7B /* BlueBillywigPlayerSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlueBillywigPlayerSDK-prefix.pch"; sourceTree = "<group>"; };
-		4A7461AE847C2567DA003AA693E8AF34 /* BBComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BBComponent.m; path = BlueBillywigPlayerSDK/Classes/BBComponent.m; sourceTree = "<group>"; };
-		4CE162D7A17122DE849669D5D8D41EBE /* Version.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Version.m; path = BlueBillywigPlayerSDK/Classes/Version.m; sourceTree = "<group>"; };
-		4FF678ECCA15AC0B7E583C518B62201F /* Pods-BlueBillywigPlayerSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlueBillywigPlayerSDK_Tests-Info.plist"; sourceTree = "<group>"; };
-		53A98CBA2F386266E8392E43F3C69C6D /* Pods-BlueBillywigPlayerSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BlueBillywigPlayerSDK_Tests-dummy.m"; sourceTree = "<group>"; };
-		55AB570A91EB9A2DB774F8C1ED07BCC4 /* BlueBillywigPlayerSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlueBillywigPlayerSDK-umbrella.h"; sourceTree = "<group>"; };
-		58E34D1BC48A7609EA46BAE7A1E1950E /* Pods-BlueBillywigPlayerSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BlueBillywigPlayerSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
-		5DA76049268AA172F28F7AE853917ADB /* Pods-BlueBillywigPlayerSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BlueBillywigPlayerSDK_Example.modulemap"; sourceTree = "<group>"; };
-		62E46D35423DD5D066CAE07FFA8A7732 /* Pods_BlueBillywigPlayerSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueBillywigPlayerSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		66A1480D6F832D84554F94F1812F8B9C /* BlueBillywigPlayerSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlueBillywigPlayerSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		74E404AA6957590324067E330E0EC533 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		75CFC5DA8D3C4C5B9F329C64464C8F29 /* Pods-BlueBillywigPlayerSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BlueBillywigPlayerSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
-		7ADF4A0762CFF91A74E8D34464C1A95F /* BBPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BBPlayer.m; path = BlueBillywigPlayerSDK/Classes/BBPlayer.m; sourceTree = "<group>"; };
-		8A961FE33939661381ECDC0559C7530A /* Pods-BlueBillywigPlayerSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BlueBillywigPlayerSDK_Tests.modulemap"; sourceTree = "<group>"; };
-		904D31EBA203F1E2E58A773221277F42 /* BlueBillywigPlayerSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BlueBillywigPlayerSDK-Info.plist"; sourceTree = "<group>"; };
-		95224A948F918245AB4258106445B563 /* BBComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BBComponent.h; path = BlueBillywigPlayerSDK/Classes/BBComponent.h; sourceTree = "<group>"; };
-		A093F2028140D79709BDC4B4AD90BB5E /* BlueBillywigPlayerSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BlueBillywigPlayerSDK-dummy.m"; sourceTree = "<group>"; };
-		AA879AD99CC69ADBCB9D065D13A8B0EE /* BlueBillywigPlayerSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = BlueBillywigPlayerSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AC156ED69921DAB416025C99FE029437 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		AD0EC4AFF34C14AC7C210A6D11DD9438 /* Pods-BlueBillywigPlayerSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlueBillywigPlayerSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
-		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B4E89664AB6AB18FA0C5E5E53D8D07C8 /* BlueBillywigPlayerSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlueBillywigPlayerSDK.xcconfig; sourceTree = "<group>"; };
-		C56BEA8BE52ABC9616D7848C7DE43F1B /* Pods-BlueBillywigPlayerSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BlueBillywigPlayerSDK_Example-umbrella.h"; sourceTree = "<group>"; };
-		C8AF29D2C5334491D52B0D5B84F0F9BC /* Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		CCE2162A0FCFFEC2E638FB3238EE2390 /* BBPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BBPlayer.h; path = BlueBillywigPlayerSDK/Classes/BBPlayer.h; sourceTree = "<group>"; };
-		D273BFBDDE731189F8089E43901A2D08 /* Pods-BlueBillywigPlayerSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BlueBillywigPlayerSDK_Example-dummy.m"; sourceTree = "<group>"; };
-		DD9E2287B1D2AC665DF306E29488876D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E34439C0D99E4E776137ABB73EBB1CF6 /* Pods-BlueBillywigPlayerSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlueBillywigPlayerSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		E6D7CF87B573FFD866C2149742DC69B0 /* Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E8AA1955F0D56536231070A6E454A0FF /* BlueBillywigPlayerSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BlueBillywigPlayerSDK.modulemap; sourceTree = "<group>"; };
-		EDB67935CECF498F256E8CBFC15C4315 /* Pods-BlueBillywigPlayerSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BlueBillywigPlayerSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F01D3E3E911996BCE2C633EC0F7329CF /* Version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Version.h; path = BlueBillywigPlayerSDK/Classes/Version.h; sourceTree = "<group>"; };
-		F75A08B569ABA0604BF32DEC6096CE78 /* Pods-BlueBillywigPlayerSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlueBillywigPlayerSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F9C1FE894C63E7C0CF17AB99CA5EA8DB /* Pods-BlueBillywigPlayerSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BlueBillywigPlayerSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		01437EF41C444DEFCADEA1DAB567383F /* BlueBillywigPlayerSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = BlueBillywigPlayerSDK.xcframework; path = bin/framework/BlueBillywigPlayerSDK.xcframework; sourceTree = "<group>"; };
+		04208BBC2C5A0EF3A6BA7D3F31B97A2A /* BlueBillywigPlayerSDKPreXCode11-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BlueBillywigPlayerSDKPreXCode11-Info.plist"; sourceTree = "<group>"; };
+		0F4DA8CC955ABCF38F54E572DDE0EAA4 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlueBillywigPlayerSDK_Example_xcode_12-acknowledgements.plist"; sourceTree = "<group>"; };
+		1579C57B5375ACBE74753F3CD90F566C /* Pods-BlueBillywigPlayerSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlueBillywigPlayerSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		187648122F93F6D018A02AA63DB349AC /* BlueBillywigPlayerSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "BlueBillywigPlayerSDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		1C44581BCBAE44299BBA335B5B853785 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		1F6D1F5DB8FC9947B9FAF57EE56BF6D9 /* BlueBillywigPlayerSDKPreXCode11.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BlueBillywigPlayerSDKPreXCode11.modulemap; sourceTree = "<group>"; };
+		22A7E882D2A724A73658748BA740C4A8 /* Pods_BlueBillywigPlayerSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BlueBillywigPlayerSDK_Example.framework; path = "Pods-BlueBillywigPlayerSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B00669C273B30E2EA9FE3B510697BA /* BlueBillywigPlayerSDKPreXCode11.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlueBillywigPlayerSDKPreXCode11.debug.xcconfig; sourceTree = "<group>"; };
+		2B935BF14E061500590DC68C3C9077E0 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlueBillywigPlayerSDK_Example_xcode_12.release.xcconfig"; sourceTree = "<group>"; };
+		2DECCE3E264B7CE48580B6F67B30A687 /* BBComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BBComponent.h; path = BlueBillywigPlayerSDK/Classes/BBComponent.h; sourceTree = "<group>"; };
+		3B7AF6D55FB6BDEC331FF1DB06E684FA /* BBPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BBPlayer.h; path = BlueBillywigPlayerSDK/Classes/BBPlayer.h; sourceTree = "<group>"; };
+		3C3354E04084B746A09F2BE7E9FCC71C /* BlueBillywigPlayerSDKPreXCode11-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BlueBillywigPlayerSDKPreXCode11-dummy.m"; sourceTree = "<group>"; };
+		3E8986746244035438BC38798E384648 /* Version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Version.h; path = BlueBillywigPlayerSDK/Classes/Version.h; sourceTree = "<group>"; };
+		3F292FBB9A02C49A41E517318A95DBBF /* BlueBillywigPlayerSDKPreXCode11.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BlueBillywigPlayerSDKPreXCode11.framework; path = BlueBillywigPlayerSDKPreXCode11.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40FB35AE4F1902166CD3781421B19B82 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlueBillywigPlayerSDK_Example_xcode_12.debug.xcconfig"; sourceTree = "<group>"; };
+		4596ACD40FEF8FA502B6B16E85578893 /* Pods_BlueBillywigPlayerSDK_Example_xcode_12.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BlueBillywigPlayerSDK_Example_xcode_12.framework; path = "Pods-BlueBillywigPlayerSDK_Example_xcode_12.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53C17262A676D5837CD02D31537FD6AD /* Pods-BlueBillywigPlayerSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BlueBillywigPlayerSDK_Example-umbrella.h"; sourceTree = "<group>"; };
+		553F02396820467C46BFBDBFD5A82BB7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		58AB782A3A32CA237D31CD14244CD1E7 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BlueBillywigPlayerSDK_Example_xcode_12-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5F913CB80839CEF664836BD007803F89 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BlueBillywigPlayerSDK_Example_xcode_12-dummy.m"; sourceTree = "<group>"; };
+		5FDDCAB6C802CC66E07B4C0F5D9BA31A /* BlueBillywigPlayerSDKPreXCode11.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = BlueBillywigPlayerSDKPreXCode11.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		602EFF71389C3D35C9975035CB03E7EB /* BlueBillywigPlayerSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = BlueBillywigPlayerSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6097DE701244D4281268EA67ED79B0D3 /* BlueBillywigPlayerSDKPreXCode11-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlueBillywigPlayerSDKPreXCode11-umbrella.h"; sourceTree = "<group>"; };
+		71DD78E6E994912381C16D5026C93165 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BlueBillywigPlayerSDK_Example_xcode_12-frameworks.sh"; sourceTree = "<group>"; };
+		732B88C4D262DA68DCD7A74E0F1F5BC1 /* Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		75CA1AD74CC1CBDC38CAAAC0490370C8 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BlueBillywigPlayerSDK_Example_xcode_12-umbrella.h"; sourceTree = "<group>"; };
+		766375FB46AA97E7AD3C6B39B4B4BF07 /* Pods-BlueBillywigPlayerSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BlueBillywigPlayerSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7CE5B0BF89D7B4462973148864901AF1 /* BBVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BBVersion.h; path = BlueBillywigPlayerSDK/Classes/BBVersion.h; sourceTree = "<group>"; };
+		7EC1962320EA102E61130D7FF7CFC896 /* BlueBillywigPlayerSDKPreXCode11.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlueBillywigPlayerSDKPreXCode11.release.xcconfig; sourceTree = "<group>"; };
+		81DCA4CCBBD9EFAF5BFB0490DD78796C /* Pods-BlueBillywigPlayerSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BlueBillywigPlayerSDK_Example.modulemap"; sourceTree = "<group>"; };
+		842EB74FED1A2280767F57B1D6817972 /* Version.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Version.m; path = BlueBillywigPlayerSDK/Classes/Version.m; sourceTree = "<group>"; };
+		88DACFC26254D5E18C0E2E270373D021 /* BlueBillywigPlayerSDKPreXCode11-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlueBillywigPlayerSDKPreXCode11-prefix.pch"; sourceTree = "<group>"; };
+		8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8D3B1AFC17418E64980695D5472E3639 /* BlueBillywigPlayerSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlueBillywigPlayerSDK.debug.xcconfig; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A7258A301DF44D496A793878F3C38E67 /* Pods-BlueBillywigPlayerSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlueBillywigPlayerSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		B9452BE2C3BC5233FBA34F568A62DDD6 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BlueBillywigPlayerSDK_Example_xcode_12.modulemap"; sourceTree = "<group>"; };
+		C39676F82FAAED0256D706AB653ED63B /* Pods-BlueBillywigPlayerSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BlueBillywigPlayerSDK_Example-dummy.m"; sourceTree = "<group>"; };
+		C9121C0DD7E795897E67DA6F5FA9A9BF /* BlueBillywigPlayerSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlueBillywigPlayerSDK.release.xcconfig; sourceTree = "<group>"; };
+		DFAC17E35C4C855B7DD30B7CFD8A28A0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E4E3829BD388452D45884D5253068E75 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlueBillywigPlayerSDK_Example_xcode_12-Info.plist"; sourceTree = "<group>"; };
+		E555ABC1FF038D0449CB410E4927B0CC /* Pods-BlueBillywigPlayerSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlueBillywigPlayerSDK_Example-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		52AACDF4A91DE3A382F3F986CC195832 /* Frameworks */ = {
+		51646F847250486D3816221A51B2F28F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCFA2E4BB4B9BC2ADC151F3888CF6D1D /* Foundation.framework in Frameworks */,
-				D27FAB8C9A2B32E3A5E3E57A9EB24C77 /* UIKit.framework in Frameworks */,
+				28A8011D33FEDCD3908C2F6BAD59C433 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A3D2AD26E5E18871BC168CDBD5EA06B /* Frameworks */ = {
+		8B418E100994AA43D698CC5C35DF8A1F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD2AC3489177233C1AD9DC219D68E59F /* Foundation.framework in Frameworks */,
+				5013672006D1210F91CE7A1F30E46EC2 /* CoreGraphics.framework in Frameworks */,
+				B924F2AE185990DD03CA49B23E6A05EB /* Foundation.framework in Frameworks */,
+				80FD02673B072D7B94BC4557D61FC530 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E0C8404EF616CE00F8CA0FB24B8FE489 /* Frameworks */ = {
+		DA9A3402E70A078A15072BE8932B4665 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB89C6996D572AD5AA9111904EF4EB5E /* Foundation.framework in Frameworks */,
+				301648CAE6D2DDB449B2C55B5354771F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		003895B15881DE3844F54E0E4AD7D102 /* Support Files */ = {
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E8AA1955F0D56536231070A6E454A0FF /* BlueBillywigPlayerSDK.modulemap */,
-				B4E89664AB6AB18FA0C5E5E53D8D07C8 /* BlueBillywigPlayerSDK.xcconfig */,
-				A093F2028140D79709BDC4B4AD90BB5E /* BlueBillywigPlayerSDK-dummy.m */,
-				904D31EBA203F1E2E58A773221277F42 /* BlueBillywigPlayerSDK-Info.plist */,
-				45E97D91D58AEF27F862A8C0A6AA3A7B /* BlueBillywigPlayerSDK-prefix.pch */,
-				55AB570A91EB9A2DB774F8C1ED07BCC4 /* BlueBillywigPlayerSDK-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/BlueBillywigPlayerSDK";
-			sourceTree = "<group>";
-		};
-		06CDD10DE71306278CF89108B3036DFD /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */,
-				74E404AA6957590324067E330E0EC533 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		25C048AF5555C0B31A1B04C1FA5B6C9B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				66A1480D6F832D84554F94F1812F8B9C /* BlueBillywigPlayerSDK.framework */,
-				36C47592E2D56DFCCAC6C4373F7EE639 /* Pods_BlueBillywigPlayerSDK_Example.framework */,
-				62E46D35423DD5D066CAE07FFA8A7732 /* Pods_BlueBillywigPlayerSDK_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		349D258AF35A509879EA84A03073D7EE /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				AA879AD99CC69ADBCB9D065D13A8B0EE /* BlueBillywigPlayerSDK.podspec */,
-				AC156ED69921DAB416025C99FE029437 /* LICENSE */,
-				DD9E2287B1D2AC665DF306E29488876D /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		396C0C620C2AA90304375F59A744E544 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7FE647F29FC3D6117FDE9D31CE666CA0 /* Pods-BlueBillywigPlayerSDK_Example */,
-				44B18FA0F92E4E5DF869BC61D25C668E /* Pods-BlueBillywigPlayerSDK_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		3F128C7BAED2662D897EE729035B1FA8 /* BlueBillywigPlayerSDK */ = {
-			isa = PBXGroup;
-			children = (
-				95224A948F918245AB4258106445B563 /* BBComponent.h */,
-				4A7461AE847C2567DA003AA693E8AF34 /* BBComponent.m */,
-				CCE2162A0FCFFEC2E638FB3238EE2390 /* BBPlayer.h */,
-				7ADF4A0762CFF91A74E8D34464C1A95F /* BBPlayer.m */,
-				F01D3E3E911996BCE2C633EC0F7329CF /* Version.h */,
-				4CE162D7A17122DE849669D5D8D41EBE /* Version.m */,
-				349D258AF35A509879EA84A03073D7EE /* Pod */,
-				003895B15881DE3844F54E0E4AD7D102 /* Support Files */,
-			);
-			name = BlueBillywigPlayerSDK;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				06CDD10DE71306278CF89108B3036DFD /* iOS */,
+				20D8528256A7AF28D53631225E57465A /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		44B18FA0F92E4E5DF869BC61D25C668E /* Pods-BlueBillywigPlayerSDK_Tests */ = {
+		16B93B86A5E0601D8F4B3FA250B5C2B0 /* Pods-BlueBillywigPlayerSDK_Example */ = {
 			isa = PBXGroup;
 			children = (
-				8A961FE33939661381ECDC0559C7530A /* Pods-BlueBillywigPlayerSDK_Tests.modulemap */,
-				F9C1FE894C63E7C0CF17AB99CA5EA8DB /* Pods-BlueBillywigPlayerSDK_Tests-acknowledgements.markdown */,
-				321EF153162A918EBBE868F861044AB7 /* Pods-BlueBillywigPlayerSDK_Tests-acknowledgements.plist */,
-				53A98CBA2F386266E8392E43F3C69C6D /* Pods-BlueBillywigPlayerSDK_Tests-dummy.m */,
-				4FF678ECCA15AC0B7E583C518B62201F /* Pods-BlueBillywigPlayerSDK_Tests-Info.plist */,
-				58E34D1BC48A7609EA46BAE7A1E1950E /* Pods-BlueBillywigPlayerSDK_Tests-umbrella.h */,
-				F75A08B569ABA0604BF32DEC6096CE78 /* Pods-BlueBillywigPlayerSDK_Tests.debug.xcconfig */,
-				C8AF29D2C5334491D52B0D5B84F0F9BC /* Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig */,
-			);
-			name = "Pods-BlueBillywigPlayerSDK_Tests";
-			path = "Target Support Files/Pods-BlueBillywigPlayerSDK_Tests";
-			sourceTree = "<group>";
-		};
-		704F3CE713794909C710CA35FEB81397 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3F128C7BAED2662D897EE729035B1FA8 /* BlueBillywigPlayerSDK */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */,
-				704F3CE713794909C710CA35FEB81397 /* Development Pods */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				25C048AF5555C0B31A1B04C1FA5B6C9B /* Products */,
-				396C0C620C2AA90304375F59A744E544 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		7FE647F29FC3D6117FDE9D31CE666CA0 /* Pods-BlueBillywigPlayerSDK_Example */ = {
-			isa = PBXGroup;
-			children = (
-				5DA76049268AA172F28F7AE853917ADB /* Pods-BlueBillywigPlayerSDK_Example.modulemap */,
-				EDB67935CECF498F256E8CBFC15C4315 /* Pods-BlueBillywigPlayerSDK_Example-acknowledgements.markdown */,
-				E34439C0D99E4E776137ABB73EBB1CF6 /* Pods-BlueBillywigPlayerSDK_Example-acknowledgements.plist */,
-				D273BFBDDE731189F8089E43901A2D08 /* Pods-BlueBillywigPlayerSDK_Example-dummy.m */,
-				75CFC5DA8D3C4C5B9F329C64464C8F29 /* Pods-BlueBillywigPlayerSDK_Example-frameworks.sh */,
-				2899B2DDEE7B0ABEE294B4243F810AA9 /* Pods-BlueBillywigPlayerSDK_Example-Info.plist */,
-				C56BEA8BE52ABC9616D7848C7DE43F1B /* Pods-BlueBillywigPlayerSDK_Example-umbrella.h */,
-				E6D7CF87B573FFD866C2149742DC69B0 /* Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig */,
-				AD0EC4AFF34C14AC7C210A6D11DD9438 /* Pods-BlueBillywigPlayerSDK_Example.release.xcconfig */,
+				81DCA4CCBBD9EFAF5BFB0490DD78796C /* Pods-BlueBillywigPlayerSDK_Example.modulemap */,
+				766375FB46AA97E7AD3C6B39B4B4BF07 /* Pods-BlueBillywigPlayerSDK_Example-acknowledgements.markdown */,
+				A7258A301DF44D496A793878F3C38E67 /* Pods-BlueBillywigPlayerSDK_Example-acknowledgements.plist */,
+				C39676F82FAAED0256D706AB653ED63B /* Pods-BlueBillywigPlayerSDK_Example-dummy.m */,
+				E555ABC1FF038D0449CB410E4927B0CC /* Pods-BlueBillywigPlayerSDK_Example-Info.plist */,
+				53C17262A676D5837CD02D31537FD6AD /* Pods-BlueBillywigPlayerSDK_Example-umbrella.h */,
+				732B88C4D262DA68DCD7A74E0F1F5BC1 /* Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig */,
+				1579C57B5375ACBE74753F3CD90F566C /* Pods-BlueBillywigPlayerSDK_Example.release.xcconfig */,
 			);
 			name = "Pods-BlueBillywigPlayerSDK_Example";
 			path = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example";
 			sourceTree = "<group>";
 		};
+		19B7EB6E77EA9BE156D75DDDA0F49603 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F292FBB9A02C49A41E517318A95DBBF /* BlueBillywigPlayerSDKPreXCode11.framework */,
+				22A7E882D2A724A73658748BA740C4A8 /* Pods_BlueBillywigPlayerSDK_Example.framework */,
+				4596ACD40FEF8FA502B6B16E85578893 /* Pods_BlueBillywigPlayerSDK_Example_xcode_12.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20D8528256A7AF28D53631225E57465A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				553F02396820467C46BFBDBFD5A82BB7 /* CoreGraphics.framework */,
+				8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */,
+				DFAC17E35C4C855B7DD30B7CFD8A28A0 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		33C9B00C8C1870C3A83F80F570144FD5 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				602EFF71389C3D35C9975035CB03E7EB /* BlueBillywigPlayerSDK.podspec */,
+				1C44581BCBAE44299BBA335B5B853785 /* LICENSE */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		61ACBF98CC94B2D3F98100E36ECAC217 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01437EF41C444DEFCADEA1DAB567383F /* BlueBillywigPlayerSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87418B2D1887C288915E9DDD9166DB84 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				187648122F93F6D018A02AA63DB349AC /* BlueBillywigPlayerSDK-xcframeworks.sh */,
+				8D3B1AFC17418E64980695D5472E3639 /* BlueBillywigPlayerSDK.debug.xcconfig */,
+				C9121C0DD7E795897E67DA6F5FA9A9BF /* BlueBillywigPlayerSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/BlueBillywigPlayerSDK";
+			sourceTree = "<group>";
+		};
+		887F5559F5ED2B5FE1D8273F949DB2E8 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3A4419969A2BC0EB15E72F944C5DC21 /* BlueBillywigPlayerSDK */,
+				E6C98252E09135EA710CA3E3656E968A /* BlueBillywigPlayerSDKPreXCode11 */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		C3A4419969A2BC0EB15E72F944C5DC21 /* BlueBillywigPlayerSDK */ = {
+			isa = PBXGroup;
+			children = (
+				61ACBF98CC94B2D3F98100E36ECAC217 /* Frameworks */,
+				33C9B00C8C1870C3A83F80F570144FD5 /* Pod */,
+				87418B2D1887C288915E9DDD9166DB84 /* Support Files */,
+			);
+			name = BlueBillywigPlayerSDK;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		C5D037B85E0146BFF172AB03370495E8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F6D1F5DB8FC9947B9FAF57EE56BF6D9 /* BlueBillywigPlayerSDKPreXCode11.modulemap */,
+				3C3354E04084B746A09F2BE7E9FCC71C /* BlueBillywigPlayerSDKPreXCode11-dummy.m */,
+				04208BBC2C5A0EF3A6BA7D3F31B97A2A /* BlueBillywigPlayerSDKPreXCode11-Info.plist */,
+				88DACFC26254D5E18C0E2E270373D021 /* BlueBillywigPlayerSDKPreXCode11-prefix.pch */,
+				6097DE701244D4281268EA67ED79B0D3 /* BlueBillywigPlayerSDKPreXCode11-umbrella.h */,
+				27B00669C273B30E2EA9FE3B510697BA /* BlueBillywigPlayerSDKPreXCode11.debug.xcconfig */,
+				7EC1962320EA102E61130D7FF7CFC896 /* BlueBillywigPlayerSDKPreXCode11.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/BlueBillywigPlayerSDKPreXCode11";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				887F5559F5ED2B5FE1D8273F949DB2E8 /* Development Pods */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				19B7EB6E77EA9BE156D75DDDA0F49603 /* Products */,
+				EB4ECCC5FDCDE00EB3B5D8F01F5479BC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E6C98252E09135EA710CA3E3656E968A /* BlueBillywigPlayerSDKPreXCode11 */ = {
+			isa = PBXGroup;
+			children = (
+				2DECCE3E264B7CE48580B6F67B30A687 /* BBComponent.h */,
+				3B7AF6D55FB6BDEC331FF1DB06E684FA /* BBPlayer.h */,
+				7CE5B0BF89D7B4462973148864901AF1 /* BBVersion.h */,
+				3E8986746244035438BC38798E384648 /* Version.h */,
+				842EB74FED1A2280767F57B1D6817972 /* Version.m */,
+				E7A0A2306F87D77E081F3D141BD19030 /* Pod */,
+				C5D037B85E0146BFF172AB03370495E8 /* Support Files */,
+			);
+			name = BlueBillywigPlayerSDKPreXCode11;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		E7A0A2306F87D77E081F3D141BD19030 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				5FDDCAB6C802CC66E07B4C0F5D9BA31A /* BlueBillywigPlayerSDKPreXCode11.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		EB4ECCC5FDCDE00EB3B5D8F01F5479BC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				16B93B86A5E0601D8F4B3FA250B5C2B0 /* Pods-BlueBillywigPlayerSDK_Example */,
+				EF06586E433912F35462908C60933F1B /* Pods-BlueBillywigPlayerSDK_Example_xcode_12 */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		EF06586E433912F35462908C60933F1B /* Pods-BlueBillywigPlayerSDK_Example_xcode_12 */ = {
+			isa = PBXGroup;
+			children = (
+				B9452BE2C3BC5233FBA34F568A62DDD6 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12.modulemap */,
+				58AB782A3A32CA237D31CD14244CD1E7 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-acknowledgements.markdown */,
+				0F4DA8CC955ABCF38F54E572DDE0EAA4 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-acknowledgements.plist */,
+				5F913CB80839CEF664836BD007803F89 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-dummy.m */,
+				71DD78E6E994912381C16D5026C93165 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-frameworks.sh */,
+				E4E3829BD388452D45884D5253068E75 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-Info.plist */,
+				75CA1AD74CC1CBDC38CAAAC0490370C8 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-umbrella.h */,
+				40FB35AE4F1902166CD3781421B19B82 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12.debug.xcconfig */,
+				2B935BF14E061500590DC68C3C9077E0 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12.release.xcconfig */,
+			);
+			name = "Pods-BlueBillywigPlayerSDK_Example_xcode_12";
+			path = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example_xcode_12";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6F62E32E8A4A61F7F723DD00B7BF7544 /* Headers */ = {
+		7C558374241C3C5593987A440AC45882 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37CFEF3AE0B815E4F843F7D63B4280CA /* Pods-BlueBillywigPlayerSDK_Example-umbrella.h in Headers */,
+				FDD8E6579DC1C80DA1AB65268437A6E7 /* Pods-BlueBillywigPlayerSDK_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAFE1C39D42BD4384B917CDE7D622A17 /* Headers */ = {
+		F43E0BCF26F8B1DD01DF305507C46DCD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99755E6E275CF97C11DFF9B03A106B91 /* Pods-BlueBillywigPlayerSDK_Tests-umbrella.h in Headers */,
+				03BAB793ADCBA20B6B094C48B734077E /* BBComponent.h in Headers */,
+				DE31BCCBEC014189B36262C4F7EDE67A /* BBPlayer.h in Headers */,
+				4796BCF19A80ED3D51800DCC32393A6A /* BBVersion.h in Headers */,
+				9D2C0E934404473359060305EA3368E3 /* BlueBillywigPlayerSDKPreXCode11-umbrella.h in Headers */,
+				EA9DEAFFE6B3474335FAC478F5BD74E6 /* Version.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9B62C418C0725EE88BB83A8B3D8685B /* Headers */ = {
+		F81113B294505451F6175CBD2BE68354 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				225089B2BA53FD241DAE74538207CE21 /* BBComponent.h in Headers */,
-				2A53481F9700EEC2E065A6281682F27A /* BBPlayer.h in Headers */,
-				E6862826D8E80F56E8005C7AE7D9F99B /* BlueBillywigPlayerSDK-umbrella.h in Headers */,
-				4332D884F98F1349BEB7F3C4A974160A /* Version.h in Headers */,
+				C49647E03A2CF09693E9034C92D89CEB /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0D682850BBC8022D25E011FB27115BBC /* Pods-BlueBillywigPlayerSDK_Example */ = {
+		1740832285DD6FDEA89D287F37740F62 /* BlueBillywigPlayerSDKPreXCode11 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 49D9D45218F7265C3942F224056FD892 /* Build configuration list for PBXNativeTarget "Pods-BlueBillywigPlayerSDK_Example" */;
+			buildConfigurationList = 8536425C0631AA04EF829C52C48D5573 /* Build configuration list for PBXNativeTarget "BlueBillywigPlayerSDKPreXCode11" */;
 			buildPhases = (
-				6F62E32E8A4A61F7F723DD00B7BF7544 /* Headers */,
-				72A764303A6821D31B92BEC8989B3AB1 /* Sources */,
-				E0C8404EF616CE00F8CA0FB24B8FE489 /* Frameworks */,
-				29F5574112B2A9B40A3DC316FA82E826 /* Resources */,
+				F43E0BCF26F8B1DD01DF305507C46DCD /* Headers */,
+				5233C058A9817FEF5A983B5264E22601 /* Sources */,
+				8B418E100994AA43D698CC5C35DF8A1F /* Frameworks */,
+				D679E7B951B44B5C8CE72A4D007D972B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				129143736AB85E6E0E4666782B9D4A8A /* PBXTargetDependency */,
+			);
+			name = BlueBillywigPlayerSDKPreXCode11;
+			productName = BlueBillywigPlayerSDKPreXCode11;
+			productReference = 3F292FBB9A02C49A41E517318A95DBBF /* BlueBillywigPlayerSDKPreXCode11.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3A57FEF366DEDC96DF49BAD4EB40F0AE /* Pods-BlueBillywigPlayerSDK_Example_xcode_12 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E6411BEBE8CF3B5983875E4CF94C7E8 /* Build configuration list for PBXNativeTarget "Pods-BlueBillywigPlayerSDK_Example_xcode_12" */;
+			buildPhases = (
+				F81113B294505451F6175CBD2BE68354 /* Headers */,
+				2DC4E01ECF816116474D01FC9B9983A3 /* Sources */,
+				51646F847250486D3816221A51B2F28F /* Frameworks */,
+				4C665B723E61F577237F021B1B6D39BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9586BC939E88BC3D29D7E35E5153224 /* PBXTargetDependency */,
+			);
+			name = "Pods-BlueBillywigPlayerSDK_Example_xcode_12";
+			productName = "Pods-BlueBillywigPlayerSDK_Example_xcode_12";
+			productReference = 4596ACD40FEF8FA502B6B16E85578893 /* Pods_BlueBillywigPlayerSDK_Example_xcode_12.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ED75E1FA83F9D5C2AAE5D4DF0399F401 /* Pods-BlueBillywigPlayerSDK_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC582BC15848394227352CBF6019362F /* Build configuration list for PBXNativeTarget "Pods-BlueBillywigPlayerSDK_Example" */;
+			buildPhases = (
+				7C558374241C3C5593987A440AC45882 /* Headers */,
+				6382B5E55133112042C3B770EF2C3AF7 /* Sources */,
+				DA9A3402E70A078A15072BE8932B4665 /* Frameworks */,
+				4DA126935787EEBBADBC4BDB8F114AFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6181F18EE755E9AA5A9E6B5429189CB2 /* PBXTargetDependency */,
 			);
 			name = "Pods-BlueBillywigPlayerSDK_Example";
 			productName = "Pods-BlueBillywigPlayerSDK_Example";
-			productReference = 36C47592E2D56DFCCAC6C4373F7EE639 /* Pods_BlueBillywigPlayerSDK_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B2962082FCDCDA12D17910F0B1341D93 /* BlueBillywigPlayerSDK */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6049F0A0EFEF0595891B31B24198706F /* Build configuration list for PBXNativeTarget "BlueBillywigPlayerSDK" */;
-			buildPhases = (
-				C9B62C418C0725EE88BB83A8B3D8685B /* Headers */,
-				D60CC64B585BECF2ED9F35107B161E67 /* Sources */,
-				52AACDF4A91DE3A382F3F986CC195832 /* Frameworks */,
-				6A8E16A55B39974051E83557381AE396 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BlueBillywigPlayerSDK;
-			productName = BlueBillywigPlayerSDK;
-			productReference = 66A1480D6F832D84554F94F1812F8B9C /* BlueBillywigPlayerSDK.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		DC6D03611B1DF0BA789B09BC2BC3926C /* Pods-BlueBillywigPlayerSDK_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 462C38FD96AB55131B4753DB36F9663F /* Build configuration list for PBXNativeTarget "Pods-BlueBillywigPlayerSDK_Tests" */;
-			buildPhases = (
-				BAFE1C39D42BD4384B917CDE7D622A17 /* Headers */,
-				7377676EEBFCB2CAF18FFADCA01411C8 /* Sources */,
-				8A3D2AD26E5E18871BC168CDBD5EA06B /* Frameworks */,
-				2EEA316F11C37AC15BCFA874AF6AE08C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3633E693FA9C5F27E8225FACC3F0D563 /* PBXTargetDependency */,
-			);
-			name = "Pods-BlueBillywigPlayerSDK_Tests";
-			productName = "Pods-BlueBillywigPlayerSDK_Tests";
-			productReference = 62E46D35423DD5D066CAE07FFA8A7732 /* Pods_BlueBillywigPlayerSDK_Tests.framework */;
+			productReference = 22A7E882D2A724A73658748BA740C4A8 /* Pods_BlueBillywigPlayerSDK_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 25C048AF5555C0B31A1B04C1FA5B6C9B /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 19B7EB6E77EA9BE156D75DDDA0F49603 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B2962082FCDCDA12D17910F0B1341D93 /* BlueBillywigPlayerSDK */,
-				0D682850BBC8022D25E011FB27115BBC /* Pods-BlueBillywigPlayerSDK_Example */,
-				DC6D03611B1DF0BA789B09BC2BC3926C /* Pods-BlueBillywigPlayerSDK_Tests */,
+				115DF9F2B0C62B5850F9E0E8C0ACCEB0 /* BlueBillywigPlayerSDK */,
+				1740832285DD6FDEA89D287F37740F62 /* BlueBillywigPlayerSDKPreXCode11 */,
+				ED75E1FA83F9D5C2AAE5D4DF0399F401 /* Pods-BlueBillywigPlayerSDK_Example */,
+				3A57FEF366DEDC96DF49BAD4EB40F0AE /* Pods-BlueBillywigPlayerSDK_Example_xcode_12 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		29F5574112B2A9B40A3DC316FA82E826 /* Resources */ = {
+		4C665B723E61F577237F021B1B6D39BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2EEA316F11C37AC15BCFA874AF6AE08C /* Resources */ = {
+		4DA126935787EEBBADBC4BDB8F114AFE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A8E16A55B39974051E83557381AE396 /* Resources */ = {
+		D679E7B951B44B5C8CE72A4D007D972B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -381,57 +442,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C1A189CC7EEA4B9FB7283CC40BD9CB75 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/BlueBillywigPlayerSDK/BlueBillywigPlayerSDK-xcframeworks.sh",
+				"${PODS_ROOT}/../../bin/framework/BlueBillywigPlayerSDK.xcframework",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputPaths = (
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/BlueBillywigPlayerSDK",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/BlueBillywigPlayerSDK/BlueBillywigPlayerSDK-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		72A764303A6821D31B92BEC8989B3AB1 /* Sources */ = {
+		2DC4E01ECF816116474D01FC9B9983A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBBD037264057CDF3F720FEA8B624737 /* Pods-BlueBillywigPlayerSDK_Example-dummy.m in Sources */,
+				51930A2FCDF4FE28A473812CF85D180B /* Pods-BlueBillywigPlayerSDK_Example_xcode_12-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7377676EEBFCB2CAF18FFADCA01411C8 /* Sources */ = {
+		5233C058A9817FEF5A983B5264E22601 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0A64D6BECF136383C80793F878EE33F /* Pods-BlueBillywigPlayerSDK_Tests-dummy.m in Sources */,
+				9E2E1AA9D2EF0F440A7A06F9663B3D41 /* BlueBillywigPlayerSDKPreXCode11-dummy.m in Sources */,
+				B88C32204B560AC254370D09F1B3C178 /* Version.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D60CC64B585BECF2ED9F35107B161E67 /* Sources */ = {
+		6382B5E55133112042C3B770EF2C3AF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				060EA51E56450085ED172FAC96C2E73C /* BBComponent.m in Sources */,
-				BCEE0DD8B969ACFA0982629639689FBA /* BBPlayer.m in Sources */,
-				7E1313C53280F275815A8056F45C4DB7 /* BlueBillywigPlayerSDK-dummy.m in Sources */,
-				97FE8CA9A5449B336738D3A9C1B28E99 /* Version.m in Sources */,
+				6F12A02F45FFDADEEEA096F018219DF8 /* Pods-BlueBillywigPlayerSDK_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		129143736AB85E6E0E4666782B9D4A8A /* PBXTargetDependency */ = {
+		6181F18EE755E9AA5A9E6B5429189CB2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BlueBillywigPlayerSDK;
-			target = B2962082FCDCDA12D17910F0B1341D93 /* BlueBillywigPlayerSDK */;
-			targetProxy = 50AF8CF53582D4DEB6179FE57EF4FA12 /* PBXContainerItemProxy */;
+			target = 115DF9F2B0C62B5850F9E0E8C0ACCEB0 /* BlueBillywigPlayerSDK */;
+			targetProxy = CA76C56CEB6E5704A91F3C032895FEE3 /* PBXContainerItemProxy */;
 		};
-		3633E693FA9C5F27E8225FACC3F0D563 /* PBXTargetDependency */ = {
+		D9586BC939E88BC3D29D7E35E5153224 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-BlueBillywigPlayerSDK_Example";
-			target = 0D682850BBC8022D25E011FB27115BBC /* Pods-BlueBillywigPlayerSDK_Example */;
-			targetProxy = FE02EEAFC0185C07ED665CA4601E1DBE /* PBXContainerItemProxy */;
+			name = BlueBillywigPlayerSDKPreXCode11;
+			target = 1740832285DD6FDEA89D287F37740F62 /* BlueBillywigPlayerSDKPreXCode11 */;
+			targetProxy = AC97132A9374025BEBD998334C00618A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0F28B0D75E1DB7804749A2C6DD338F7A /* Debug */ = {
+		1AC3351A14CBF19E3D0F2DA5641D3105 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4E89664AB6AB18FA0C5E5E53D8D07C8 /* BlueBillywigPlayerSDK.xcconfig */;
+			baseConfigurationReference = 7EC1962320EA102E61130D7FF7CFC896 /* BlueBillywigPlayerSDKPreXCode11.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -440,44 +519,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BlueBillywigPlayerSDK/BlueBillywigPlayerSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BlueBillywigPlayerSDK/BlueBillywigPlayerSDK-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/BlueBillywigPlayerSDKPreXCode11/BlueBillywigPlayerSDKPreXCode11-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BlueBillywigPlayerSDKPreXCode11/BlueBillywigPlayerSDKPreXCode11-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BlueBillywigPlayerSDK/BlueBillywigPlayerSDK.modulemap";
-				PRODUCT_MODULE_NAME = BlueBillywigPlayerSDK;
-				PRODUCT_NAME = BlueBillywigPlayerSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		13BD7EEC71846C94FC91F9F2550D9C55 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4E89664AB6AB18FA0C5E5E53D8D07C8 /* BlueBillywigPlayerSDK.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BlueBillywigPlayerSDK/BlueBillywigPlayerSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BlueBillywigPlayerSDK/BlueBillywigPlayerSDK-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BlueBillywigPlayerSDK/BlueBillywigPlayerSDK.modulemap";
-				PRODUCT_MODULE_NAME = BlueBillywigPlayerSDK;
-				PRODUCT_NAME = BlueBillywigPlayerSDK;
+				MODULEMAP_FILE = "Target Support Files/BlueBillywigPlayerSDKPreXCode11/BlueBillywigPlayerSDKPreXCode11.modulemap";
+				PRODUCT_MODULE_NAME = BlueBillywigPlayerSDKPreXCode11;
+				PRODUCT_NAME = BlueBillywigPlayerSDKPreXCode11;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -488,10 +537,86 @@
 			};
 			name = Release;
 		};
-		5153DC2E9BB4F6D6F85AF7C0A4A2A27F /* Debug */ = {
+		21156C17BBFF8663271C06B409B63DAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B935BF14E061500590DC68C3C9077E0 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example_xcode_12/Pods-BlueBillywigPlayerSDK_Example_xcode_12-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example_xcode_12/Pods-BlueBillywigPlayerSDK_Example_xcode_12.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		35B4C414ADBB1076833DFC76750AD7AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27B00669C273B30E2EA9FE3B510697BA /* BlueBillywigPlayerSDKPreXCode11.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BlueBillywigPlayerSDKPreXCode11/BlueBillywigPlayerSDKPreXCode11-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BlueBillywigPlayerSDKPreXCode11/BlueBillywigPlayerSDKPreXCode11-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BlueBillywigPlayerSDKPreXCode11/BlueBillywigPlayerSDKPreXCode11.modulemap";
+				PRODUCT_MODULE_NAME = BlueBillywigPlayerSDKPreXCode11;
+				PRODUCT_NAME = BlueBillywigPlayerSDKPreXCode11;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		35F2A110A3ED084B950FFE982399518E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D3B1AFC17418E64980695D5472E3639 /* BlueBillywigPlayerSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		431BA2B8298F0EE71735B9E0114E1955 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -514,6 +639,101 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		53AB55D17B8740E0625D9EBA8C060F19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40FB35AE4F1902166CD3781421B19B82 /* Pods-BlueBillywigPlayerSDK_Example_xcode_12.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example_xcode_12/Pods-BlueBillywigPlayerSDK_Example_xcode_12-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example_xcode_12/Pods-BlueBillywigPlayerSDK_Example_xcode_12.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		79759604D78320E712558F49DF19AA9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -547,109 +767,16 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		69EA24BF19530E52B53BACC0598E045B /* Debug */ = {
+		BE49856C3422D0B03627445A032151DE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6D7CF87B573FFD866C2149742DC69B0 /* Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig */;
+			baseConfigurationReference = 1579C57B5375ACBE74753F3CD90F566C /* Pods-BlueBillywigPlayerSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example/Pods-BlueBillywigPlayerSDK_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example/Pods-BlueBillywigPlayerSDK_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6A949A208667F02694AF29D5DCC8D4BF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		9429D03C9D19772D2C6FF776522358E9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD0EC4AFF34C14AC7C210A6D11DD9438 /* Pods-BlueBillywigPlayerSDK_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -678,46 +805,25 @@
 			};
 			name = Release;
 		};
-		F35AA9DAF14883A0A445F348A196FF5A /* Release */ = {
+		F3A428AA3C553ACDBEA602894A248DD6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8AF29D2C5334491D52B0D5B84F0F9BC /* Pods-BlueBillywigPlayerSDK_Tests.release.xcconfig */;
+			baseConfigurationReference = C9121C0DD7E795897E67DA6F5FA9A9BF /* BlueBillywigPlayerSDK.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-BlueBillywigPlayerSDK_Tests/Pods-BlueBillywigPlayerSDK_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BlueBillywigPlayerSDK_Tests/Pods-BlueBillywigPlayerSDK_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		F851161346A7D1FCD318A449F502A7CA /* Debug */ = {
+		FC34603A5038C875CE7AAFEBBC880193 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F75A08B569ABA0604BF32DEC6096CE78 /* Pods-BlueBillywigPlayerSDK_Tests.debug.xcconfig */;
+			baseConfigurationReference = 732B88C4D262DA68DCD7A74E0F1F5BC1 /* Pods-BlueBillywigPlayerSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -726,12 +832,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-BlueBillywigPlayerSDK_Tests/Pods-BlueBillywigPlayerSDK_Tests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example/Pods-BlueBillywigPlayerSDK_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BlueBillywigPlayerSDK_Tests/Pods-BlueBillywigPlayerSDK_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-BlueBillywigPlayerSDK_Example/Pods-BlueBillywigPlayerSDK_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -748,43 +854,52 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5153DC2E9BB4F6D6F85AF7C0A4A2A27F /* Debug */,
-				6A949A208667F02694AF29D5DCC8D4BF /* Release */,
+				79759604D78320E712558F49DF19AA9F /* Debug */,
+				431BA2B8298F0EE71735B9E0114E1955 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		462C38FD96AB55131B4753DB36F9663F /* Build configuration list for PBXNativeTarget "Pods-BlueBillywigPlayerSDK_Tests" */ = {
+		5E6411BEBE8CF3B5983875E4CF94C7E8 /* Build configuration list for PBXNativeTarget "Pods-BlueBillywigPlayerSDK_Example_xcode_12" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F851161346A7D1FCD318A449F502A7CA /* Debug */,
-				F35AA9DAF14883A0A445F348A196FF5A /* Release */,
+				53AB55D17B8740E0625D9EBA8C060F19 /* Debug */,
+				21156C17BBFF8663271C06B409B63DAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		49D9D45218F7265C3942F224056FD892 /* Build configuration list for PBXNativeTarget "Pods-BlueBillywigPlayerSDK_Example" */ = {
+		8536425C0631AA04EF829C52C48D5573 /* Build configuration list for PBXNativeTarget "BlueBillywigPlayerSDKPreXCode11" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				69EA24BF19530E52B53BACC0598E045B /* Debug */,
-				9429D03C9D19772D2C6FF776522358E9 /* Release */,
+				35B4C414ADBB1076833DFC76750AD7AA /* Debug */,
+				1AC3351A14CBF19E3D0F2DA5641D3105 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6049F0A0EFEF0595891B31B24198706F /* Build configuration list for PBXNativeTarget "BlueBillywigPlayerSDK" */ = {
+		CC582BC15848394227352CBF6019362F /* Build configuration list for PBXNativeTarget "Pods-BlueBillywigPlayerSDK_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0F28B0D75E1DB7804749A2C6DD338F7A /* Debug */,
-				13BD7EEC71846C94FC91F9F2550D9C55 /* Release */,
+				FC34603A5038C875CE7AAFEBBC880193 /* Debug */,
+				BE49856C3422D0B03627445A032151DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB9D576AE4E1770251E1720CD41186BB /* Build configuration list for PBXAggregateTarget "BlueBillywigPlayerSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35F2A110A3ED084B950FFE982399518E /* Debug */,
+				F3A428AA3C553ACDBEA602894A248DD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

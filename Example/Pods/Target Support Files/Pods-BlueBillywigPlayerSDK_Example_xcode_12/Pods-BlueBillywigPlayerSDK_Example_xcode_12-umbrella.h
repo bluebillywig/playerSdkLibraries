@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_BlueBillywigPlayerSDK_TestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_BlueBillywigPlayerSDK_TestsVersionString[];
+FOUNDATION_EXPORT double Pods_BlueBillywigPlayerSDK_Example_xcode_12VersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_BlueBillywigPlayerSDK_Example_xcode_12VersionString[];
 

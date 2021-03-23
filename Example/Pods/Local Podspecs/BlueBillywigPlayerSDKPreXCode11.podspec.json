@@ -1,7 +1,7 @@
 {
-  "name": "BlueBillywigPlayerSDK",
-  "version": "1.4.1.30",
-  "summary": "This is the Blue Billywig player SDK.",
+  "name": "BlueBillywigPlayerSDKPreXCode11",
+  "version": "1.4.1.28",
+  "summary": "This is the Blue Billywig player SDK for xcode 10 and below.",
   "description": "The Blue Billywig player SDK can be used to communicate with our player.",
   "homepage": "https://github.com/bluebillywig/playerSdkLibraries.git",
   "license": {
@@ -13,12 +13,14 @@
   },
   "source": {
     "git": "https://github.com/bluebillywig/playerSdkLibraries.git",
-    "tag": "1.4.1.30"
+    "tag": "1.4.1.28"
   },
   "platforms": {
     "ios": "9.3"
   },
-  "vendored_frameworks": "bin/framework/BlueBillywigPlayerSDK.xcframework",
+  "source_files": "BlueBillywigPlayerSDK/Classes/**/*",
+  "public_header_files": "BlueBillywigPlayerSDK/Classes/**/*.h",
+  "vendored_libraries": "bin/lib/libBlueBillywigPlayerSDKPreXCode11.a",
   "frameworks": [
     "UIKit",
     "Foundation",

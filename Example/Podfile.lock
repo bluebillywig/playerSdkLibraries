@@ -1,16 +1,21 @@
 PODS:
-  - BlueBillywigPlayerSDK (1.1.14)
+  - BlueBillywigPlayerSDK (1.4.1.30)
+  - BlueBillywigPlayerSDKPreXCode11 (1.4.1.28)
 
 DEPENDENCIES:
   - BlueBillywigPlayerSDK (from `../`)
+  - BlueBillywigPlayerSDKPreXCode11 (from `../`)
 
 EXTERNAL SOURCES:
   BlueBillywigPlayerSDK:
     :path: "../"
+  BlueBillywigPlayerSDKPreXCode11:
+    :path: "../"
 
 SPEC CHECKSUMS:
-  BlueBillywigPlayerSDK: 2ac9afae89f04a90b83ebebe84b75bab72f9447d
+  BlueBillywigPlayerSDK: 9e96e81987474eaf09622df8b608c5837f00be36
+  BlueBillywigPlayerSDKPreXCode11: 814540887a9cd4fe85217fb0ef8a3b902e501488
 
-PODFILE CHECKSUM: 2eca84d681984c83910225db9075de18df4c9e0c
+PODFILE CHECKSUM: 5d3ba98288ea84453540c6c7e9c5296f8ecbac9c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.10.1

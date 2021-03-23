@@ -6,9 +6,11 @@
 # To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
 #
 
+zipfile = "#{__dir__}/BlueBillywigPlayerSDK.zip"
+
 Pod::Spec.new do |s|
   s.name             = 'BlueBillywigPlayerSDK'
-  s.version          = '1.4.1.29'
+  s.version          = '0.0.1'
 
   s.summary          = 'This is the Blue Billywig player SDK.'
 
@@ -27,14 +29,13 @@ The Blue Billywig player SDK can be used to communicate with our player.
   s.author           = { 'Floris Groenendijk' => 'f.groenendijk@bluebillywig.com' }
   s.source           = { :git => 'https://github.com/bluebillywig/playerSdkLibraries.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.0'
+  #system("rm -rf #{zipfile} && zip -r #{zipfile} LICENSE BlueBillywigPlayerSDK.podspec BlueBillywigPlayerSDK/Headers BlueBillywigPlayerSDK.framework > /dev/null")
+  #s.source            = { :http => "file://#{zipfile}" }
 
-  s.source_files = 'BlueBillywigPlayerSDK/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'BlueBillywigPlayerSDK' => ['BlueBillywigPlayerSDK/Assets/*.png']
-  # }
+  s.ios.deployment_target = '9.3'
+  s.platform = :ios, "9.2"
 
-  s.public_header_files = 'BlueBillywigPlayerSDK/Classes/**/*.h'
+  s.vendored_frameworks = 'BlueBillywigPlayerSDK.framework'
+
   s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
 end
