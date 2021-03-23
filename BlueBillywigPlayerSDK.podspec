@@ -35,5 +35,5 @@ The Blue Billywig player SDK can be used to communicate with our player.
 
   s.vendored_frameworks = 'BlueBillywigPlayerSDK.framework'
 
-  s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
+  s.frameworks = 'WebKit', 'Foundation', 'CoreGraphics'
 end
