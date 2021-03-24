@@ -10,9 +10,20 @@
 
 @implementation BBAppDelegate
 
+UIWindow *window;
+UIStoryboard *storyboard;
+UIViewController *viewController;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil];
+    } else {
+        storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+    }
+
+    viewController = [storyboard instantiateInitialViewController];
+
     return YES;
 }
 
