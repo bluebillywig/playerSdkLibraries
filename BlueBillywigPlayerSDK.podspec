@@ -10,7 +10,7 @@ zipfile = "#{__dir__}/BlueBillywigPlayerSDK.zip"
 
 Pod::Spec.new do |s|
   s.name             = 'BlueBillywigPlayerSDK'
-  s.version          = '1.4.1.29'
+  s.version          = '1.4.1.30'
 
   s.summary          = 'This is the Blue Billywig player SDK.'
 
