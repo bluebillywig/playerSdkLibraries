@@ -4,7 +4,7 @@ platform :ios, '9.2'
 
 target 'BlueBillywigPlayerSDK_Example' do
   pod 'BlueBillywigPlayerSDK'
-  #pod 'BlueBillywigPlayerSDK', :git => 'https://github.com/bluebillywig/playerSdkLibraries.git', :tag => '1.4.1.30'
+  #pod 'BlueBillywigPlayerSDK', :git => 'https://github.com/bluebillywig/playerSdkLibraries.git', :tag => '1.4.1.31'
 
   target 'BlueBillywigPlayerSDK_Tests' do
     inherit! :search_paths
