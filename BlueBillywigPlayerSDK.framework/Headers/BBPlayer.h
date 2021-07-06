@@ -14,6 +14,7 @@
     BOOL fullscreenOnRotateToLandscape;
     BOOL debug;
     BOOL showPersonalizedAds;
+    BOOL openAdsInNewWindow;
     NSString *playout;
     NSString *assetType;
     NSString *adUnit;
@@ -24,10 +25,12 @@
 - (void)setPlayout:(NSString * _Nonnull)playout;
 - (void)setAssetType:(NSString * _Nonnull)assetType;
 - (void)setAdUnit:(NSString * _Nonnull)adUnit;
+- (void)setOpenAdsInNewWindow:(BOOL)openAdsInNewWindow;
 
 - (BOOL)fullscreenOnRotateToLandscape;
 - (BOOL)debug;
 - (BOOL)showPersonalizedAds;
+- (BOOL)openAdsInNewWindow;
 - (NSString * _Nonnull)playout;
 - (NSString * _Nonnull)assetType;
 - (NSString * _Nonnull)adUnit;
