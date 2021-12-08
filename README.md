@@ -49,10 +49,6 @@ XCode 12 needs different libraries for an actual iPhone and an iPhone simulator.
 
 Release: bin/lib/libBBComponent-<version>.a
 
-## Author
-
-Floris Groenendijk, f.groenendijk@bluebillywig.com
-
 ## License
 
 BlueBillywigPlayerSDK is available under the MIT license. See the LICENSE file for more info.
