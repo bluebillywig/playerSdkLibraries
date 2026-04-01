@@ -8,7 +8,7 @@
 The replacement iOS SDK is available via CocoaPods:
 
 ```ruby
-pod 'BlueBillywigNativeShared-iOS'
+pod 'BlueBillywigNativePlayerKit-iOS'
 ```
 
 For documentation and integration guides, visit [Blue Billywig Support](https://support.bluebillywig.com/).
