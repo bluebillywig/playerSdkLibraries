@@ -1,53 +1,21 @@
-# BlueBillywigPlayerSDK
+# BlueBillywigPlayerSDK (DEPRECATED)
 
-[![CI Status](https://img.shields.io/travis/weirdall/BlueBillywigPlayerSDK.svg?style=flat)](https://travis-ci.org/weirdall/BlueBillywigPlayerSDK)
-[![Version](https://img.shields.io/cocoapods/v/BlueBillywigPlayerSDK.svg?style=flat)](https://cocoapods.org/pods/BlueBillywigPlayerSDK)
-[![License](https://img.shields.io/cocoapods/l/BlueBillywigPlayerSDK.svg?style=flat)](https://cocoapods.org/pods/BlueBillywigPlayerSDK)
-[![Platform](https://img.shields.io/cocoapods/p/BlueBillywigPlayerSDK.svg?style=flat)](https://cocoapods.org/pods/BlueBillywigPlayerSDK)
+> **This SDK is deprecated and no longer maintained.**
+> Please migrate to the current Blue Billywig Native Player SDK.
 
-## Example
+## Migration
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-BlueBillywigPlayerSDK is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+The replacement iOS SDK is available via CocoaPods:
 
 ```ruby
-pod 'BlueBillywigPlayerSDK'
+pod 'BlueBillywigNativeShared-iOS'
 ```
 
-## Xcode 12 libraries
+For documentation and integration guides, visit [Blue Billywig Support](https://support.bluebillywig.com/).
 
-XCode 12 needs different libraries for an actual iPhone and an iPhone simulator.
+## About
 
-### For use on a simulator:
-
-| Version | Library |
-|--|--|
-| Debug | bin/lib/libBBComponent-<version>-debug-iphonesimulator.a |
-| Release | bin/lib/libBBComponent-<version>-iphonesimulator.a
-
-### For use on an iPhone or iPad:
-
-| Version | Library |
-|--|--|
-| Debug | bin/lib/libBBComponent-<version>-debug-iphoneos.a |
-| Release | bin/lib/libBBComponent-<version>.a
-
-### Fat library for XCode 11 and lower
-
-| Version | Library |
-|--|--|
-| Debug | bin/lib/libBBComponent-<version>-debug-iphone-simulator.a |
-| Release | bin/lib/libBBComponent-<version>-iphone-simulator.a
-
-### Release library for only iPhone devices
-
-Release: bin/lib/libBBComponent-<version>.a
+This repository contained the CocoaPods distribution artifacts for the legacy Blue Billywig iOS Player SDK (v1.4.2), last updated in March 2022. It is no longer receiving updates, bug fixes, or security patches.
 
 ## License
 
