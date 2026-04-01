@@ -6,24 +6,20 @@
 # To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
 #
 
-zipfile = "#{__dir__}/BlueBillywigPlayerSDK.zip"
-
 Pod::Spec.new do |s|
   s.name             = 'BlueBillywigPlayerSDK'
-  s.version          = '1.4.1.36'
+  s.version          = '1.4.3'
 
-  s.summary          = 'This is the Blue Billywig player SDK.'
+  s.summary          = '[DEPRECATED] Use BlueBillywigNativeShared-iOS instead.'
 
   s.description      = <<-DESC
-The Blue Billywig player SDK can be used to communicate with our player.
+This SDK is deprecated and no longer maintained.
+Please migrate to the current Blue Billywig Native Player SDK: BlueBillywigNativeShared-iOS.
                        DESC
 
-  s.homepage         = 'https://github.com/bluebillywig/playerSdkLibraries.git'
+  s.homepage         = 'https://support.bluebillywig.com/'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Floris Groenendijk' => 'f.groenendijk@bluebillywig.com' }
-
-  #system("rm -rf #{zipfile} && zip -r #{zipfile} LICENSE BlueBillywigPlayerSDK.podspec BlueBillywigPlayerSDK.framework > /dev/null")
-  #s.source            = { :http => "file://#{zipfile}" }
+  s.author           = { 'Blue Billywig' => 'tech@bluebillywig.com' }
 
   s.source           = { :git => 'https://github.com/bluebillywig/playerSdkLibraries.git', :tag => s.version.to_s }
 
@@ -36,4 +32,7 @@ The Blue Billywig player SDK can be used to communicate with our player.
   s.vendored_frameworks = 'BlueBillywigPlayerSDK.framework'
 
   s.frameworks = 'WebKit', 'Foundation', 'CoreGraphics'
+
+  s.deprecated = true
+  s.deprecated_in_favor_of = 'BlueBillywigNativeShared-iOS'
 end
