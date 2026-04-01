@@ -8,13 +8,13 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BlueBillywigPlayerSDK'
-  s.version          = '1.4.3'
+  s.version          = '1.4.4'
 
-  s.summary          = '[DEPRECATED] Use BlueBillywigNativeShared-iOS instead.'
+  s.summary          = '[DEPRECATED] Use BlueBillywigNativePlayerKit-iOS instead.'
 
   s.description      = <<-DESC
 This SDK is deprecated and no longer maintained.
-Please migrate to the current Blue Billywig Native Player SDK: BlueBillywigNativeShared-iOS.
+Please migrate to the current Blue Billywig Native Player SDK: BlueBillywigNativePlayerKit-iOS.
                        DESC
 
   s.homepage         = 'https://support.bluebillywig.com/'
@@ -34,5 +34,5 @@ Please migrate to the current Blue Billywig Native Player SDK: BlueBillywigNativ
   s.frameworks = 'WebKit', 'Foundation', 'CoreGraphics'
 
   s.deprecated = true
-  s.deprecated_in_favor_of = 'BlueBillywigNativeShared-iOS'
+  s.deprecated_in_favor_of = 'BlueBillywigNativePlayerKit-iOS'
 end
